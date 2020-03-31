@@ -1,0 +1,90 @@
+.landing-block {
+  width: $desktop-width;
+  min-height: 658px;
+  font-family: $font-primary;
+  background-image: url("../img/landing-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: $white;
+}
+
+.landing-block__top-line {
+  display: flex;
+  height: 51px;
+}
+
+.landing-block__name {
+  width: 89px;
+  font-size: 26px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin-left: 103px;
+}
+
+.landing-block__phone {
+  width: 154px;
+  font-size: 26px;
+  line-height: 26px;
+  margin-left: auto;
+  margin-right: 103px;
+}
+
+.landing-block__wrapper {
+  display: flex;
+}
+
+.landing-block_text-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 41.2%;
+}
+
+.landing-block__image-container {
+  width: 500px;
+  height: 556px;
+}
+
+.landing-block__city {
+  margin: 0;
+  margin-top: 121px;
+  font-size: 49px;
+  line-height: 49px;
+}
+
+.landing-block__title {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 109px;
+  font-weight: 700;
+  line-height: 109px;
+  width: 298px;
+  margin-bottom: 80px;
+}
+
+.landing-block__image-container {
+  margin-left: 64px;
+}
+
+.landing-block__types-list {
+  position: absolute;
+  top: 311px;
+  left: 122px;
+}
+
+.landing-block__button {
+  width: 230px;
+  height: 57px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.landing-block__social-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 103px;
+}
