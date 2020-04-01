@@ -10,7 +10,8 @@
 
 .landing-block__top-line {
   display: flex;
-  height: 51px;
+  padding-top: 3px;
+  height: 48px;
 }
 
 .landing-block__name {
@@ -19,6 +20,7 @@
   line-height: 26px;
   text-transform: uppercase;
   margin-left: 103px;
+  letter-spacing: 0.02em;
 }
 
 .landing-block__phone {
@@ -27,6 +29,7 @@
   line-height: 26px;
   margin-left: auto;
   margin-right: 103px;
+  letter-spacing: 0.03em;
 }
 
 .landing-block__wrapper {
@@ -38,7 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 41.2%;
+  width: 36.5%;
 }
 
 .landing-block__image-container {
@@ -48,9 +51,11 @@
 
 .landing-block__city {
   margin: 0;
-  margin-top: 121px;
+  margin-top: 118px;
+  margin-bottom: 7px;
   font-size: 49px;
   line-height: 49px;
+  letter-spacing: 0.03em;
 }
 
 .landing-block__title {
@@ -59,9 +64,11 @@
   text-align: right;
   font-size: 109px;
   font-weight: 700;
+  letter-spacing: 0.03em;
   line-height: 109px;
   width: 298px;
-  margin-bottom: 80px;
+  margin-bottom: 61px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .landing-block__image-container {
@@ -70,21 +77,23 @@
 
 .landing-block__types-list {
   position: absolute;
-  top: 311px;
+  top: 305px;
   left: 122px;
 }
 
 .landing-block__button {
-  width: 230px;
-  height: 57px;
+  width: 232px;
+  height: 60px;
   font-size: 12px;
   line-height: 14px;
+  letter-spacing: 0.05em;
 }
 
 .landing-block__social-list {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   margin-left: auto;
   margin-right: 103px;
+  margin-top: auto;
+  margin-bottom: 21px;
 }
