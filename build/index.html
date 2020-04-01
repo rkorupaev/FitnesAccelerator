@@ -7,15 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Фитнес: Лига А</title>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="preload" href="fonts/BebasNeue.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Condensed-Regular.woff2" as="font">
+  <script>
+    document.createElement( "picture" );
+  </script>
 </head>
-
 <body>
   <div class="body-container">
     <h1 class="visually-hidden">Supergym. Фитнес Центр.</h1>
     <div class="landing-block">
       <div class="landing-block__top-line">
         <p class="landing-block__name">Supergym</p>
-        <p class="landing-block__phone">8-800-555-55-55</p>
+        <a class="landing-block__phone" href="tel:8-800-555-55-55">8-800-555-55-55</a>
       </div>
       <div class="landing-block__wrapper">
         <div class="landing-block_text-block">
@@ -26,7 +30,7 @@
             <li class="types-list__item">Групповые занятия</li>
             <li class="types-list__item">Кардио-зона</li>
           </ul>
-          <button class="landing-block__button button">Купить Абонемент</button>
+          <button class="landing-block__button button" type="button">Купить Абонемент</button>
         </div>
         <div class="landing-block__image-container">
           <img class="landing-block__image" src="img/main_trainer.jpg" alt="main trainer" width="500px" height="556px">
