@@ -2,9 +2,9 @@
   width: $desktop-width;
   min-height: 658px;
   font-family: $font-primary;
+  background-color: $background-color;
   background-image: url("../img/landing-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
   color: $white;
 }
 
@@ -44,11 +44,6 @@
   width: 36.5%;
 }
 
-.landing-block__image-container {
-  width: 500px;
-  height: 556px;
-}
-
 .landing-block__city {
   margin: 0;
   margin-top: 118px;
@@ -73,12 +68,19 @@
 
 .landing-block__image-container {
   margin-left: 64px;
+  width: 500px;
+  height: 556px;
+}
+
+.landing-block__image {
+  width: 500px;
+  height: 556px;
 }
 
 .landing-block__types-list {
   position: absolute;
   top: 305px;
-  left: 122px;
+  right: 252px;
 }
 
 .landing-block__button {
@@ -96,4 +98,80 @@
   margin-right: 103px;
   margin-top: auto;
   margin-bottom: 21px;
+}
+
+@media (max-width: $tablet-only) {
+  .landing-block {
+    width: $tablet-width;
+    min-height: 554px;
+  }
+
+  .landing-block__top-line {
+    padding-top: 14px;
+    height: 68px;
+  }
+
+  .landing-block__name {
+    width: 82px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-left: 45px;
+  }
+
+  .landing-block__phone {
+    width: 138px;
+    font-size: 24px;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: 45px;
+    letter-spacing: 0.02em;
+  }
+
+  .landing-block_text-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 48%;
+  }
+
+  .landing-block__city {
+    margin-top: 53px;
+    margin-bottom: 3px;
+    font-size: 34px;
+    line-height: 34px;
+  }
+
+  .landing-block__title {
+    font-size: 86px;
+    line-height: 86px;
+    letter-spacing: 0.03em;
+    width: 235px;
+    margin-bottom: 45px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .landing-block__image-container {
+    margin-left: 30px;
+    width: 324px;
+    height: 390px;
+  }
+
+  .landing-block__image {
+    width: 324px;
+    height: 390px;
+  }
+
+  .landing-block__types-list {
+    top: 186px;
+    right: 197px;
+  }
+
+  .landing-block__button {
+    width: 185px;
+  }
+
+  .landing-block__social-list {
+    display: none;
+  }
 }
