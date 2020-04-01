@@ -190,3 +190,55 @@
     }
   }
 }
+
+@media (max-width: $mobile-only) {
+  .gym-block {
+    width: $mobile-width;
+    min-height: 925px;
+    align-items: flex-start;
+  }
+
+  .gym-block__text-block {
+    width: 90%;
+    padding-left: 15px;
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  .gym-block__title {
+    margin-top: 68px;
+    margin-bottom: 7px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .gym-block__sub-title {
+    margin-bottom: 24px;
+  }
+
+  .gym-block__images-block {
+    width: 320px;
+    height: 313px;
+  }
+
+  .gym-block__main-image {
+    width: 320px;
+    height: 313px;
+    padding: 0;
+    margin-bottom: 35px;
+  }
+
+  .gym-block__video-block {
+    width: 320px;
+    height: 167px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+  }
+
+  .gym-block__video-image {
+    width: 320px;
+    height: 167px;
+  }
+}
