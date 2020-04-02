@@ -21,8 +21,8 @@
   display: flex;
   max-width: $desktop-width - 225;
   width: 100%;
-  margin-left: 122px;
-  margin-right: 103px;
+  margin-left: 8.93%;
+  margin-right: 7.54%;
 }
 
 .landing-block_text-block {
@@ -88,8 +88,8 @@
 .landing-block__social-list {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   margin-left: auto;
-  margin-top: auto;
   margin-bottom: 162px;
 }
 

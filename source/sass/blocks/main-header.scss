@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0 7.5%;
-  padding-top: 3px;
+  padding-top: 26px;
   width: 100%;
   max-width: 1160px;
   color: $white;
@@ -20,7 +20,6 @@
 }
 
 .main-header__phone {
-  padding-top: 26px;
   width: 154px;
   font-size: 26px;
   line-height: 26px;
@@ -32,7 +31,7 @@
 @media (max-width: $tablet-only) {
   .main-header {
     padding: 0 5.85%;
-    padding-top: 14px;
+    padding-top: 38px;
     min-height: 68px;
     max-width: 678px;
   }
@@ -41,10 +40,14 @@
     width: 82px;
     font-size: 24px;
     line-height: 24px;
+
+    & svg {
+      width: 82px;
+      height: 17px;
+    }
   }
 
   .main-header__phone {
-    padding-top: 24px;
     width: 138px;
     font-size: 24px;
     line-height: 24px;
@@ -55,7 +58,7 @@
 @media (max-width: $mobile-only) {
   .main-header {
     padding: 0 4.68%;
-    padding-top: 0px;
+    padding-top: 20px;
     min-height: 52px;
     max-width: 290px;
   }
@@ -67,7 +70,6 @@
   }
 
   .main-header__phone {
-    padding-top: 20px;
     width: 115px;
     font-size: 20px;
     line-height: 20px;
