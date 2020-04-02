@@ -1,17 +1,23 @@
 .gym-block {
   width: 100%;
+  max-width: $desktop-width;
   display: flex;
   min-height: 756px;
   background-color: $white;
+  color: $black;
+}
+
+.gym-block__wrapper {
+  display: flex;
+  padding-left: 11.93%;
+  margin-top: 120px;
 }
 
 .gym-block__text-block {
   width: 26%;
-  padding-left: 163px;
-  color: $black;
 
   & h2 {
-    margin-top: 165px;
+    margin-top: 45px;
     margin-bottom: 10px;
     font-family: $font-primary;
     font-weight: 700;
@@ -19,14 +25,14 @@
     line-height: 49px;
     letter-spacing: 0.03em;
   }
-}
 
-.gym-block__sub-title {
-  margin: 0;
-  margin-bottom: 39px;
-  font-size: 18px;
-  line-height: 27px;
-  font-family: $side-text;
+  &>p {
+    margin: 0;
+    margin-bottom: 39px;
+    font-size: 18px;
+    line-height: 27px;
+    font-family: $side-text;
+  }
 }
 
 .gym-block__text {
@@ -35,7 +41,6 @@
   line-height: 24px;
   font-weight: 300;
   font-family: $side-text;
-  width: 355px;
 
   &--margin {
     margin-bottom: 10px;
@@ -44,27 +49,29 @@
 
 .gym-block__images-block {
   position: relative;
-  margin-left: 22px;
-}
-
-.gym-block__main-image {
   width: 660px;
   height: 401px;
-  padding-top: 120px;
-  padding-left: 63px;
+  margin-left: 6.22%;
+  background-color: $main-background;
+  background-image: url("../img/gym.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gym.jpg_2x.jpg");
+  }
 }
 
 .gym-block__video-block {
   width: 364px;
   height: 228px;
   position: absolute;
-  left: 0;
-  bottom: 120px;
-}
+  left: -63px;
+  bottom: -115px;
 
-.gym-block__video-image {
-  width: 364px;
-  height: 228px;
+  & img {
+    width: 364px;
+    height: 228px;
+  }
 }
 
 .gym-block__play-icon {
@@ -104,28 +111,34 @@
 
 @media (max-width: $tablet-only) {
   .gym-block {
-    width: $tablet-width;
     min-height: 854px;
     flex-direction: column;
     align-items: center;
   }
 
+  .gym-block__wrapper {
+    padding: 0;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .gym-block__text-block {
-    width: 502px;
+    width: 65.36%;
     padding: 0;
     text-align: center;
     margin-bottom: 20px;
 
     & h2 {
-      margin-top: 97px;
+      margin: 0;
       margin-bottom: 12px;
       font-size: 42px;
       line-height: 42px;
     }
-  }
 
-  .gym-block__sub-title {
-    margin-bottom: 34px;
+    & p {
+      margin-bottom: 34px;
+    }
   }
 
   .gym-block__text {
@@ -138,12 +151,9 @@
 
   .gym-block__images-block {
     margin: 0;
-  }
-
-  .gym-block__main-image {
     width: 678px;
     height: 345px;
-    padding: 0;
+    background-size: cover;
   }
 
   .gym-block__video-block {
@@ -153,11 +163,11 @@
     left: 50%;
     bottom: -46%;
     transform: translate(-50%, -50%);
-  }
 
-  .gym-block__video-image {
-    width: 266px;
-    height: 167px;
+    & img {
+      width: 266px;
+      height: 167px;
+    }
   }
 
   .gym-block__play-icon {
@@ -197,52 +207,53 @@
 
 @media (max-width: $mobile-only) {
   .gym-block {
-    width: $mobile-width;
     min-height: 925px;
     align-items: flex-start;
   }
 
+  .gym-block__wrapper {
+    margin-top: 70px;
+  }
+
   .gym-block__text-block {
     width: 90%;
-    padding-left: 15px;
     text-align: left;
     margin-bottom: 35px;
+    padding: 0 4.68%;
 
     & h2 {
-      margin-top: 68px;
       margin-bottom: 7px;
       font-size: 32px;
       line-height: 32px;
     }
-  }
 
-  .gym-block__sub-title {
-    margin-bottom: 24px;
+    & p {
+      margin-bottom: 24px;
+    }
   }
 
   .gym-block__images-block {
-    width: 320px;
+    width: 100%;
     height: 313px;
-  }
-
-  .gym-block__main-image {
-    width: 320px;
-    height: 313px;
-    padding: 0;
-    margin-bottom: 35px;
+    background-position-x: 100%;
   }
 
   .gym-block__video-block {
-    width: 320px;
+    padding-top: 343px;
+    width: 100%;
     height: 167px;
     position: relative;
     left: 0;
     top: 0;
     transform: translate(0, 0);
+
+    & img {
+      width: 320px;
+      height: 167px;
+    }
   }
 
-  .gym-block__video-image {
-    width: 320px;
-    height: 167px;
+  .gym-block__play-icon {
+    top: 85%;
   }
 }
