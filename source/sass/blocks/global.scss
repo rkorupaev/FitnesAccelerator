@@ -1,4 +1,9 @@
-img {
+
+.body-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}img {
   width: 100%;
   height: auto;
 }
@@ -9,7 +14,8 @@ a {
 }
 
 body {
-  background-color: $main-background;
+  min-height: $mobile-width;
+  font-family: $font-primary;
 }
 
 .body-container {
