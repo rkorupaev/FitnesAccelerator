@@ -1,5 +1,5 @@
 .gym-block {
-  width: $desktop-width;
+  width: 100%;
   display: flex;
   min-height: 756px;
   background-color: $white;
@@ -36,6 +36,10 @@
   font-weight: 300;
   font-family: $side-text;
   width: 355px;
+
+  &--margin {
+    margin-bottom: 10px;
+  }
 }
 
 .gym-block__images-block {
