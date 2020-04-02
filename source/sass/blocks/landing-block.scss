@@ -7,8 +7,7 @@
   background-color: $background-color;
   background-image: url("../img/landing-background.jpg");
   background-size: cover;
-  margin: 0 7.5%;
-  padding-top: 48px;
+  padding-top: 51px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/landing-background_2x.jpg");
@@ -89,7 +88,6 @@
 
 @media (max-width: $tablet-only) {
   .landing-block {
-    width: $tablet-width;
     min-height: 554px;
     padding-top: 82px;
   }
@@ -141,7 +139,6 @@
 
 @media (max-width: $mobile-only) {
   .landing-block {
-    width: $mobile-width;
     min-height: 491px;
   }
 
