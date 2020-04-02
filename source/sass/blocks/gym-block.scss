@@ -9,16 +9,16 @@
   width: 26%;
   padding-left: 163px;
   color: $black;
-}
 
-.gym-block__title {
-  margin-top: 165px;
-  margin-bottom: 10px;
-  font-family: $font-primary;
-  font-weight: 700;
-  font-size: 49px;
-  line-height: 49px;
-  letter-spacing: 0.03em;
+  & h2 {
+    margin-top: 165px;
+    margin-bottom: 10px;
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .gym-block__sub-title {
@@ -115,13 +115,13 @@
     padding: 0;
     text-align: center;
     margin-bottom: 20px;
-  }
 
-  .gym-block__title {
-    margin-top: 97px;
-    margin-bottom: 12px;
-    font-size: 42px;
-    line-height: 42px;
+    & h2 {
+      margin-top: 97px;
+      margin-bottom: 12px;
+      font-size: 42px;
+      line-height: 42px;
+    }
   }
 
   .gym-block__sub-title {
@@ -207,13 +207,13 @@
     padding-left: 15px;
     text-align: left;
     margin-bottom: 35px;
-  }
 
-  .gym-block__title {
-    margin-top: 68px;
-    margin-bottom: 7px;
-    font-size: 32px;
-    line-height: 32px;
+    & h2 {
+      margin-top: 68px;
+      margin-bottom: 7px;
+      font-size: 32px;
+      line-height: 32px;
+    }
   }
 
   .gym-block__sub-title {
