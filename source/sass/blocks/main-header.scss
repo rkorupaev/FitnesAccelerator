@@ -1,0 +1,28 @@
+.main-header {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3px;
+  width: 100%;
+  max-width: 1160px;
+  color: $white;
+  font-family: $font-primary;
+}
+
+.main-header__logo {
+  width: 89px;
+  font-size: 26px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  letter-spacing: 0.02em;
+}
+
+.main-header__phone {
+  padding-top: 26px;
+  width: 154px;
+  font-size: 26px;
+  line-height: 26px;
+  margin-left: auto;
+  letter-spacing: 0.03em;
+}

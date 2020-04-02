@@ -1,9 +1,12 @@
 .landing-block {
-  width: $desktop-width;
+  width: 100%;
   min-height: 658px;
   font-family: $font-primary;
   background-color: $background-color;
   background-image: url("../img/landing-background.jpg");
+  background-size: cover;
+  margin: 0 7.5%;
+  padding-top: 48px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/landing-background_2x.jpg");
@@ -11,31 +14,6 @@
 
   background-repeat: no-repeat;
   color: $white;
-}
-
-.landing-block__top-line {
-  display: flex;
-  padding-top: 3px;
-  height: 48px;
-}
-
-.landing-block__name {
-  width: 89px;
-  font-size: 26px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin-left: 103px;
-  letter-spacing: 0.02em;
-}
-
-.landing-block__phone {
-  padding-top: 26px;
-  width: 154px;
-  font-size: 26px;
-  line-height: 26px;
-  margin-left: auto;
-  margin-right: 103px;
-  letter-spacing: 0.03em;
 }
 
 .landing-block__wrapper {
