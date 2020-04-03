@@ -14,7 +14,7 @@
 }
 
 .gym-block__text-block {
-  width: 26%;
+  width: 30%;
 
   & h2 {
     margin-top: 45px;
@@ -51,7 +51,7 @@
   position: relative;
   width: 660px;
   height: 401px;
-  margin-left: 6.22%;
+  margin-left: 6.52%;
   background-color: $main-background;
   background-image: url("../img/gym.jpg");
   background-repeat: no-repeat;
@@ -118,7 +118,7 @@
 
   .gym-block__wrapper {
     padding: 0;
-    margin-top: 100px;
+    margin-top: 97px;
     flex-direction: column;
     align-items: center;
   }
@@ -194,8 +194,6 @@
       width: 70px;
       height: 70px;
       border: 2px solid $background-color;
-      // border-image: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
-      // border-image-slice: 1;
       opacity: 0.3;
       left: -32px;
       top: -27px;

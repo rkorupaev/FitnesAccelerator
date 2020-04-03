@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 32.6%;
+  width: 33%;
 
   & p {
     margin: 0;
@@ -73,7 +73,7 @@
 .landing-block__types-list {
   position: absolute;
   top: 305px;
-  right: 252px;
+  right: 264px;
   width: 113px;
 }
 
@@ -83,6 +83,17 @@
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .landing-block__social-list {
@@ -90,7 +101,7 @@
   flex-direction: column;
   justify-content: flex-end;
   margin-left: auto;
-  margin-bottom: 162px;
+  margin-bottom: 82px;
 }
 
 @media (max-width: $tablet-only) {
@@ -136,7 +147,7 @@
 
   .landing-block__types-list {
     top: 186px;
-    right: 197px;
+    right: 212px;
   }
 
   .landing-block__button {
@@ -151,6 +162,7 @@
 @media (max-width: $mobile-only) {
   .landing-block {
     min-height: 409px;
+    padding-top: 49px;
   }
 
   .landing-block_text-block {
@@ -159,7 +171,7 @@
 
     & p {
       margin-top: 63px;
-      margin-bottom: 5px;
+      margin-bottom: 9px;
       font-size: 28px;
       line-height: 28px;
     }
@@ -168,7 +180,7 @@
       font-size: 78px;
       line-height: 78px;
       width: 213px;
-      margin-bottom: 50px;
+      margin-bottom: 47px;
     }
   }
 
@@ -183,8 +195,8 @@
   }
 
   .landing-block__types-list {
-    top: 183px;
-    right: 179px;
+    top: 184px;
+    right: 178px;
   }
 
   .landing-block__button {
