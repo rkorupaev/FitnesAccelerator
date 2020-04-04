@@ -1,100 +1,133 @@
-.main-header {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 1160px;
-  color: $white;
-  font-family: $font-primary;
+.main-header
+{
+    font-family: $font-primary;
+
+    display: flex;
+
+    width: 100%;
+    min-height: 26px;
+
+    color: $white;
+
+    flex-wrap: wrap;
 }
 
-.main-header__logo {
-  width: 89px;
-  font-size: 26px;
-  line-height: 26px;
-  text-transform: uppercase;
-  outline: none;
-  letter-spacing: 0.02em;
+.main-header__logo
+{
+    font-size: 26px;
+    line-height: 26px;
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-    transition-duration: 0.2s;
-  }
+    width: 89px;
 
-  &:active {
-    opacity: 0.3;
-    transition-duration: 0.2s;
-  }
-}
+    letter-spacing: .02em;
+    text-transform: uppercase;
 
-.main-header__phone {
-  width: 154px;
-  font-size: 26px;
-  line-height: 26px;
-  margin-left: auto;
-  letter-spacing: 0.03em;
-  outline: none;
+    outline: none;
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-    transition-duration: 0.2s;
-  }
+    &:hover,
+    &:focus
+    {
+        transition-duration: .2s;
 
-  &:active {
-    opacity: 0.3;
-    transition-duration: 0.2s;
-  }
-}
-
-
-@media (max-width: $tablet-only) {
-  .main-header {
-    max-width: 678px;
-    padding-bottom: 25px;
-  }
-
-  .main-header__logo {
-    width: 82px;
-    font-size: 24px;
-    line-height: 24px;
-
-    & svg {
-      width: 82px;
-      height: 17px;
+        opacity: .7;
     }
-  }
 
-  .main-header__phone {
-    width: 138px;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-  }
+    &:active
+    {
+        transition-duration: .2s;
+
+        opacity: .3;
+    }
 }
 
-@media (max-width: $mobile-only) {
-  .main-header {
-    padding: 0 4.68%;
-    padding-top: 20px;
-    min-height: 20px;
-    max-width: 290px;
-  }
+.main-header__phone
+{
+    font-size: 26px;
+    line-height: 26px;
 
-  .main-header__logo {
-    width: 68px;
-    font-size: 20px;
-    line-height: 20px;
+    width: 154px;
+    margin-left: auto;
 
-    & svg {
-      width: 68px;
-      height: 15px;
+    letter-spacing: .03em;
+
+    outline: none;
+
+    &:hover,
+    &:focus
+    {
+        transition-duration: .2s;
+
+        opacity: .7;
     }
-  }
 
-  .main-header__phone {
-    width: 115px;
-    font-size: 20px;
-    line-height: 20px;
-  }
+    &:active
+    {
+        transition-duration: .2s;
+
+        opacity: .3;
+    }
+}
+
+
+@media (max-width: $tablet-only)
+{
+    .main-header
+    {
+        padding-bottom: 21px;
+    }
+
+    .main-header__logo
+    {
+        font-size: 24px;
+        line-height: 24px;
+
+        width: 82px;
+
+        & svg
+        {
+            width: 82px;
+            height: 17px;
+        }
+    }
+
+    .main-header__phone
+    {
+        font-size: 24px;
+        line-height: 24px;
+
+        width: 138px;
+
+        letter-spacing: .02em;
+    }
+}
+
+@media (max-width: $mobile-only)
+{
+    .main-header
+    {
+        min-height: 20px;
+        padding-bottom: 0;
+    }
+
+    .main-header__logo
+    {
+        font-size: 20px;
+        line-height: 20px;
+
+        width: 68px;
+
+        & svg
+        {
+            width: 68px;
+            height: 15px;
+        }
+    }
+
+    .main-header__phone
+    {
+        font-size: 20px;
+        line-height: 20px;
+
+        width: 115px;
+    }
 }
