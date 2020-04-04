@@ -20,7 +20,8 @@
 
 .gym-block__text-block
 {
-    width: 30%;
+    width: 30.5%;
+    padding-left: 60px;
 
     & h2
     {
@@ -57,7 +58,7 @@
 
     &--margin
     {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 }
 
@@ -67,7 +68,7 @@
 
     width: 660px;
     height: 401px;
-    margin-left: 6.52%;
+    margin-left: 7.52%;
 
     background-color: $main-background;
     background-image: url('../img/gym.jpg');
@@ -160,7 +161,8 @@
     {
         flex-direction: column;
 
-        min-height: 854px;
+        padding-top: 97px;
+        padding-bottom: 178px;
 
         align-items: center;
     }
@@ -178,7 +180,7 @@
     .gym-block__text-block
     {
         width: 65.36%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding: 0;
 
         text-align: center;
@@ -189,7 +191,7 @@
             line-height: 42px;
 
             margin: 0;
-            margin-bottom: 12px;
+            margin-bottom: 11px;
         }
 
         & p
@@ -220,7 +222,7 @@
     .gym-block__video-block
     {
         position: absolute;
-        bottom: -46%;
+        bottom: -48%;
         left: 50%;
 
         width: 266px;
@@ -239,16 +241,22 @@
     {
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 49.5%;
 
         transform: translate(-50%, -50%);
+
+        & svg
+        {
+            width: 12px;
+            height: 12px;
+        }
 
         &::after
         {
             position: absolute;
             z-index: -1;
-            top: -16px;
-            left: -21px;
+            top: -17px;
+            left: -14px;
 
             width: 52px;
             height: 52px;
@@ -264,7 +272,7 @@
             position: absolute;
             z-index: -1;
             top: -27px;
-            left: -32px;
+            left: -23px;
 
             width: 70px;
             height: 70px;
@@ -283,6 +291,8 @@
     .gym-block
     {
         min-height: 925px;
+        padding-top: 66px;
+        padding-bottom: 70px;
 
         align-items: flex-start;
     }
@@ -295,7 +305,7 @@
     .gym-block__text-block
     {
         width: 90%;
-        margin-bottom: 35px;
+        margin-bottom: 10px;
         padding: 0 4.68%;
 
         text-align: left;
@@ -314,6 +324,11 @@
         }
     }
 
+    .gym-block__text
+    {
+        width: 88.9%;
+    }
+
     .gym-block__images-block
     {
         width: 100%;
@@ -329,8 +344,10 @@
         left: 0;
 
         width: 100%;
+        width: 320px;
         height: 167px;
-        padding-top: 343px;
+        margin: 0 auto;
+        padding-top: 354px;
 
         transform: translate(0, 0);
 
@@ -343,6 +360,17 @@
 
     .gym-block__play-icon
     {
-        top: 85%;
+        top: 84%;
+        left: 51%;
+
+        &::after
+        {
+            left: -17px;
+        }
+
+        &::before
+        {
+            left: -28px;
+        }
     }
 }
