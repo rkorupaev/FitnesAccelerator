@@ -2,27 +2,10 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: $desktop-width - 206;
   min-height: 607px;
   font-family: $font-primary;
-  background-color: $background-color;
-  background-image: url("../img/landing-background.jpg");
-  background-size: cover;
-  padding-top: 51px;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/landing-background_2x.jpg");
-  }
-
-  background-repeat: no-repeat;
   color: $white;
-}
-
-.landing-block__wrapper {
-  display: flex;
-  max-width: $desktop-width - 225;
-  width: 100%;
-  margin-left: 8.93%;
-  margin-right: 7.54%;
 }
 
 .landing-block_text-block {
@@ -89,10 +72,12 @@
   &:hover,
   &:focus {
     opacity: 0.7;
+    transition-duration: 0.2s;
   }
 
   &:active {
     opacity: 0.3;
+    transition-duration: 0.2s;
   }
 }
 
@@ -107,7 +92,6 @@
 @media (max-width: $tablet-only) {
   .landing-block {
     min-height: 472px;
-    padding-top: 82px;
   }
 
   .landing-block_text-block {
@@ -128,10 +112,6 @@
       width: 235px;
       margin-bottom: 45px;
     }
-  }
-
-  .landing-block__wrapper {
-    margin: 0 45px;
   }
 
   .landing-block__image-container {
@@ -182,12 +162,6 @@
       width: 213px;
       margin-bottom: 47px;
     }
-  }
-
-  .landing-block__wrapper {
-    max-width: 290px;
-    margin-left: 14px;
-    margin-right: 15px;
   }
 
   .landing-block__image-container {

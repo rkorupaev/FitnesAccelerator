@@ -1,9 +1,6 @@
 .main-header {
-  position: absolute;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 7.5%;
-  padding-top: 29px;
   width: 100%;
   max-width: 1160px;
   color: $white;
@@ -21,10 +18,12 @@
   &:hover,
   &:focus {
     opacity: 0.7;
+    transition-duration: 0.2s;
   }
 
   &:active {
     opacity: 0.3;
+    transition-duration: 0.2s;
   }
 }
 
@@ -39,20 +38,20 @@
   &:hover,
   &:focus {
     opacity: 0.7;
+    transition-duration: 0.2s;
   }
 
   &:active {
     opacity: 0.3;
+    transition-duration: 0.2s;
   }
 }
 
 
 @media (max-width: $tablet-only) {
   .main-header {
-    padding: 0 5.85%;
-    padding-top: 38px;
-    min-height: 68px;
     max-width: 678px;
+    padding-bottom: 25px;
   }
 
   .main-header__logo {

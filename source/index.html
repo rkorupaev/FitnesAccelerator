@@ -16,18 +16,17 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <div class="body-container">
-    <header class="main-header">
-      <a href="index.html" class="main-header__logo" aria-label="Название зала: Супер Джим"><svg width="87" height="20" viewBox="0 0 87 20" fill="none">
-          <use xlink:href="#logo"></use>
-        </svg></a>
-      <a class="main-header__phone" href="tel:8-800-555-55-55" aria-label="Телефон администратора">8-800-555-55-55</a>
-    </header>
-    <main class="page-main">
-      <article class="landing-block">
-        <div class="landing-block__wrapper">
+    <div class="intro-block">
+      <header class="main-header">
+        <a class="main-header__logo" aria-label="Название зала: Супер Джим"><svg width="87" height="20" viewBox="0 0 87 20" fill="none">
+            <use xlink:href="#logo"></use>
+          </svg></a>
+        <a class="main-header__phone" href="tel:8-800-555-55-55" aria-label="Телефон администратора">8-800-555-55-55</a>
+      </header>
+      <section class="landing-block">
           <div class="landing-block_text-block">
             <p>Омск</p>
-            <h1>Фитнес Центр</h1>
+            <h1>Фитнес Центр<span class="visually-hidden">Супер Джим</span></h1>
             <ul class="landing-block__types-list types-list">
               <li>Тренажерный зал</li>
               <li>Групповые занятия</li>
@@ -42,8 +41,9 @@
             <li><a href="#" aria-label="Страница в Vkontakte">VK</a></li>
             <li><a href="#" aria-label="Страница в Instagram">IG</a></li>
           </ul>
-        </div>
-      </article>
+      </section>
+    </div>
+    <main class="page-main">
       <section class="gym-block">
         <div class="gym-block__wrapper">
           <div class="gym-block__text-block">
@@ -62,8 +62,21 @@
                   <use xlink:href="#play_icon"></use>
                 </svg>
               </button>
-              <img src="img/gym_2.jpg" alt="Фото зала, другой ракурс" width="364" height="228">
+              <!-- 1х: 364px*228px; 2x: 728px*456px -->
+              <img src="img/gym_2.jpg" srcset="img/gym_2.jpg 1x, img/gym_2_2x.jpg 2x" alt="Фото зала, другой ракурс" width="364" height="228">
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="passes-block">
+        <div class="passes-block__wrapper">
+          <h2 class="passes-block__title">Абонементы</h2>
+          <div class="passes-block__months">
+            <ul class="passes-block__months-list">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
           </div>
         </div>
       </section>
