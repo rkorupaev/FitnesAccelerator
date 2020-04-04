@@ -1,0 +1,73 @@
+.passtype-list
+{
+    font-family: $side-text;
+
+    display: flex;
+
+    width: 100%;
+    margin-top: 39px;
+
+    list-style: none;
+
+    color: $black;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.passtype-list__item
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 360px;
+
+    background-color: $white;
+
+    align-items: center;
+
+    & h3
+    {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 29px;
+
+        margin: 0;
+        margin-top: 68px;
+        margin-bottom: 22px;
+    }
+
+    & > p
+    {
+        font-size: 16px;
+        line-height: 24px;
+
+        margin-bottom: 96px;
+    }
+}
+
+.passtype-list__price
+{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 90px;
+
+    width: 122px;
+    min-height: 42px;
+
+    color: $price-color;
+
+    & span
+    {
+        color: $black;
+    }
+}
+
+.passtype-list__button
+{
+    width: 206px;
+    min-height: 64px;
+
+    color: $black;
+    border: 2px solid $black;
+}
