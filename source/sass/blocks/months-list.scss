@@ -48,3 +48,14 @@
         border-bottom: 2px solid $red;
     }
 }
+
+@media (max-width: $tablet-only)
+{
+    .months-list
+    {
+        font-size: 18px;
+        line-height: 27px;
+        width: 332px;
+        min-height: 40px;
+    }
+}
