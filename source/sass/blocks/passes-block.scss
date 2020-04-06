@@ -24,10 +24,14 @@
         content: '';
 
         background-image: url('../img/weights.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 147%;
+
 
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
         {
-            background-image: url('../img/weights_2x.jpg');
+            background-image: url('../img/weights_2x.png');
         }
     }
 }
@@ -64,6 +68,7 @@
     .passes-block
     {
         padding-top: 102px;
+
         &::after
         {
             right: 25px;
@@ -73,7 +78,7 @@
 
             @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
             {
-                background-image: url('../img/weights_mobile_2x.jpg');
+                background-image: url('../img/weights_mobile_2x.png');
             }
         }
     }
@@ -87,6 +92,26 @@
 
             margin: 0;
             margin-bottom: 32px;
+        }
+    }
+}
+
+@media (max-width: $mobile-only)
+{
+    .passes-block
+    {
+        padding-top: 66px;
+    }
+
+    .passes-block__container
+    {
+        & h2
+        {
+            font-size: 32px;
+            line-height: 32px;
+
+            margin: 0;
+            margin-bottom: 23px;
         }
     }
 }
