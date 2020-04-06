@@ -120,8 +120,25 @@
     font-weight: 700;
     line-height: 14px;
 
-    width: 343px;
+    width: 100%;
     min-height: 67px;
+
+    &:hover,
+    &:focus
+    {
+        animation-name: shadow;
+        animation-duration: .7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    &:active
+    {
+        transition-duration: .2s;
+        animation: none;
+
+        opacity: .3;
+    }
 }
 
 .games-block__image
@@ -137,5 +154,140 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
     {
         background-image: url('../img/training_man_2x.jpg');
+    }
+}
+
+@media (max-width: $tablet-only)
+{
+    .games-block__text
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 31.34%;
+        padding-top: 51px;
+        padding-right: 5.86%;
+        padding-bottom: 51px;
+        padding-left: 5.86%;
+
+        align-items: center;
+    }
+
+    .games-block__text-wrapper
+    {
+        margin-bottom: 15px;
+
+        & h2
+        {
+            font-size: 52px;
+            line-height: 52px;
+
+            width: 117px;
+        }
+
+        & + p
+        {
+            font-size: 12px;
+            line-height: 18px;
+
+            margin-bottom: 36px;
+        }
+    }
+
+    .games-block__dates-wrapper
+    {
+        margin-left: 29px;
+    }
+
+    .games-block__date-block
+    {
+        width: 42px;
+        margin-bottom: 4px;
+
+        & > p
+        {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    .games-block__date
+    {
+        & > span
+        {
+            font-size: 24px;
+            line-height: 36px;
+
+            margin-right: 3px;
+        }
+    }
+
+    .games-block__month-and-year
+    {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .games-block__time-block
+    {
+        & > p
+        {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        & span
+        {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+
+    .games-block__button
+    {
+        font-size: 10px;
+        line-height: 12px;
+
+        min-height: 43px;
+    }
+
+    .games-block__image
+    {
+        background-image: url('../img/training_man_tablet.jpg');
+
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+        {
+            background-image: url('../img/training_man_tablet_2x.jpg');
+        }
+    }
+}
+
+
+@media (max-width: $mobile-only)
+{
+    .games-block
+    {
+        flex-direction: column;
+    }
+    .games-block__text
+    {
+        width: 72.5%;
+        padding-right: 13.75%;
+        padding-left: 13.75%;
+    }
+
+    .games-block__image
+    {
+        width: 100%;
+        min-height: 292px;
+
+        background-image: url('../img/training_man_mobile.jpg');
+
+
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
+        {
+            background-image: url('../img/training_man_mobile_2x.jpg');
+        }
     }
 }

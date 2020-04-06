@@ -27,3 +27,15 @@ $side-text: "Roboto Condensed", "Arial", sans-serif;
 //retina stats
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+
+//animation
+@keyframes shadow {
+  from {
+    box-shadow: none;
+  }
+
+  to {
+    box-shadow: 0 0 15px 2px $black;
+  }
+}

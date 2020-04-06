@@ -101,6 +101,11 @@
     .passes-block
     {
         padding-top: 66px;
+
+        &::after
+        {
+            background-image: none;
+        }
     }
 
     .passes-block__container
