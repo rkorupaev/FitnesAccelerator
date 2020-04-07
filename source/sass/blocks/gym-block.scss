@@ -29,10 +29,10 @@
     margin-top: 45px;
     margin-bottom: 10px;
 
-    letter-spacing: .03em;
+    letter-spacing: 0.03em;
   }
 
-  &>p {
+  & > p {
     font-family: $side-text;
     font-size: 18px;
     line-height: 27px;
@@ -63,11 +63,11 @@
   margin-left: 7.52%;
 
   background-color: $main-background;
-  background-image: url('../img/gym.jpg');
+  background-image: url("../img/gym.jpg");
   background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url('../img/gym_2x.jpg');
+    background-image: url("../img/gym_2x.jpg");
   }
 }
 
@@ -103,7 +103,7 @@
   cursor: pointer;
   transform: translate(-50%, -50%);
 
-  transition-duration: .2s;
+  transition-duration: 0.2s;
 
   &::after {
     position: absolute;
@@ -131,18 +131,18 @@
 
     content: '';
 
-    opacity: .3;
+    opacity: 0.3;
     border: 2px solid $background-color;
     border-radius: 50px;
   }
 
   &:hover,
   &:focus {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   &:active {
-    opacity: .4;
+    opacity: 0.4;
   }
 }
 
@@ -261,7 +261,7 @@
 
       content: '';
 
-      opacity: .3;
+      opacity: 0.3;
       border: 2px solid $background-color;
       border-radius: 50px;
     }
@@ -316,7 +316,6 @@
     top: 0;
     left: 0;
 
-    width: 100%;
     width: 320px;
     height: 167px;
     margin: 0 auto;

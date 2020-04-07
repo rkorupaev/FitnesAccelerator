@@ -1,13 +1,12 @@
-.button
-{
-    font-family: $side-text;
-    font-weight: 700;
+.button {
+  font-family: $side-text;
+  font-weight: 700;
 
-    height: auto;
+  height: auto;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    color: $white;
-    border: 4px solid $white;
-    background-color: transparent;
+  color: $white;
+  border: 4px solid $white;
+  background-color: transparent;
 }

@@ -30,10 +30,10 @@
     width: 201px;
     margin: 0;
 
-    letter-spacing: .03em;
+    letter-spacing: 0.03em;
   }
 
-  &+p {
+  & + p {
     font-size: 18px;
     line-height: 27px;
 
@@ -52,7 +52,7 @@
   width: 64px;
   margin-bottom: 4px;
 
-  &>p {
+  & > p {
     font-size: 18px;
     line-height: 27px;
 
@@ -63,7 +63,7 @@
 .games-block__date {
   display: flex;
 
-  &>span {
+  & > span {
     font-size: 40px;
     font-weight: 700;
     line-height: 60px;
@@ -86,7 +86,7 @@
   display: flex;
   flex-direction: column;
 
-  &>p {
+  & > p {
     font-size: 18px;
     line-height: 27px;
 
@@ -110,19 +110,19 @@
 
   cursor: pointer;
 
-  transition-duration: .2s;
+  transition-duration: 0.2s;
 
   &:hover,
   &:focus {
     animation-name: shadow;
-    animation-duration: .7s;
+    animation-duration: 0.7s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
 
   &:active {
     animation: none;
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
@@ -130,13 +130,13 @@
   width: 56.88%;
 
   background-color: $background-blue;
-  background-image: url('../img/training_man.jpg');
+  background-image: url("../img/training_man.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url('../img/training_man_2x.jpg');
+    background-image: url("../img/training_man_2x.jpg");
   }
 }
 
@@ -164,7 +164,7 @@
       width: 117px;
     }
 
-    &+p {
+    & + p {
       font-size: 12px;
       line-height: 18px;
 
@@ -180,14 +180,14 @@
     width: 42px;
     margin-bottom: 4px;
 
-    &>p {
+    & > p {
       font-size: 12px;
       line-height: 18px;
     }
   }
 
   .games-block__date {
-    &>span {
+    & > span {
       font-size: 24px;
       line-height: 36px;
 
@@ -201,7 +201,7 @@
   }
 
   .games-block__time-block {
-    &>p {
+    & > p {
       font-size: 12px;
       line-height: 18px;
     }
@@ -220,11 +220,11 @@
   }
 
   .games-block__image {
-    background-image: url('../img/training_man_tablet.jpg');
+    background-image: url("../img/training_man_tablet.jpg");
 
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url('../img/training_man_tablet_2x.jpg');
+      background-image: url("../img/training_man_tablet_2x.jpg");
     }
   }
 }
@@ -245,11 +245,11 @@
     width: 100%;
     min-height: 292px;
 
-    background-image: url('../img/training_man_mobile.jpg');
+    background-image: url("../img/training_man_mobile.jpg");
 
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url('../img/training_man_mobile_2x.jpg');
+      background-image: url("../img/training_man_mobile_2x.jpg");
     }
   }
 }

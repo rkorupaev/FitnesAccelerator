@@ -1,33 +1,29 @@
-.social-list
-{
-    list-style: none;
+.social-list {
+  list-style: none;
 
-    & li
-    {
-        font-family: $side-text;
-        font-size: 12px;
-        line-height: 30px;
+  & li {
+    font-family: $side-text;
+    font-size: 12px;
+    line-height: 30px;
 
-        width: 30px;
-        height: 30px;
-        margin-right: -8px;
-        margin-bottom: 3px;
+    width: 30px;
+    height: 30px;
+    margin-right: -8px;
+    margin-bottom: 3px;
 
-        cursor: pointer;
+    cursor: pointer;
 
-        outline: none;
+    outline: none;
 
-        transition-duration: .2s;
+    transition-duration: .2s;
 
-        &:hover,
-        &:focus
-        {
-            opacity: .7;
-        }
-
-        &:active
-        {
-            opacity: .3;
-        }
+    &:hover,
+    &:focus {
+      opacity: .7;
     }
+
+    &:active {
+      opacity: .3;
+    }
+  }
 }
