@@ -1,9 +1,9 @@
-.page-main
-{
-    display: flex;
-    flex-direction: column;
+.page-main {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
 
-    width: 100%;
+  width: 100%;
 
-    align-items: center;
+  align-items: center;
 }

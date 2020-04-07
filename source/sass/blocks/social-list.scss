@@ -17,18 +17,16 @@
 
         outline: none;
 
+        transition-duration: .2s;
+
         &:hover,
         &:focus
         {
-            transition-duration: .2s;
-
             opacity: .7;
         }
 
         &:active
         {
-            transition-duration: .2s;
-
             opacity: .3;
         }
     }

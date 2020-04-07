@@ -1,295 +1,255 @@
-.games-block
-{
-    display: flex;
+.games-block {
+  display: flex;
 }
 
-.games-block__text
-{
-    font-family: $side-text;
+.games-block__text {
+  font-family: $side-text;
 
-    width: 31.6%;
-    padding-top: 87px;
-    padding-right: 5.78%;
-    padding-bottom: 87px;
-    padding-left: 5.71%;
+  width: 31.6%;
+  padding-top: 87px;
+  padding-right: 5.78%;
+  padding-bottom: 87px;
+  padding-left: 5.71%;
 
-    color: $white;
-    background-color: $background-red;
+  color: $white;
+  background-color: $background-red;
 }
 
-.games-block__text-wrapper
-{
-    font-family: $side-text;
+.games-block__text-wrapper {
+  font-family: $side-text;
 
-    display: flex;
+  display: flex;
 
-    margin-bottom: 33px;
+  margin-bottom: 33px;
 
-    & h2
-    {
-        font-family: $font-primary;
-        font-size: 90px;
-        line-height: 90px;
+  & h2 {
+    font-family: $font-primary;
+    font-size: 90px;
+    line-height: 90px;
 
-        width: 201px;
-        margin: 0;
+    width: 201px;
+    margin: 0;
 
-        letter-spacing: .03em;
-    }
+    letter-spacing: .03em;
+  }
 
-    & + p
-    {
-        font-size: 18px;
-        line-height: 27px;
+  &+p {
+    font-size: 18px;
+    line-height: 27px;
 
-        margin-bottom: 55px;
-    }
+    margin-bottom: 55px;
+  }
 }
 
-.games-block__dates-wrapper
-{
-    margin-left: 50px;
+.games-block__dates-wrapper {
+  margin-left: 50px;
 }
 
-.games-block__date-block
-{
+.games-block__date-block {
+  display: flex;
+  flex-direction: column;
+
+  width: 64px;
+  margin-bottom: 4px;
+
+  &>p {
+    font-size: 18px;
+    line-height: 27px;
+
+    border-bottom: 1px solid $white;
+  }
+}
+
+.games-block__date {
+  display: flex;
+
+  &>span {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+
+    margin-right: 7px;
+  }
+}
+
+.games-block__month-and-year {
+  font-size: 14px;
+  line-height: 21px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.games-block__time-block {
+  display: flex;
+  flex-direction: column;
+
+  &>p {
+    font-size: 18px;
+    line-height: 27px;
+
+    border-bottom: 1px solid $white;
+  }
+
+  & span {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 60px;
+  }
+}
+
+.games-block__button {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 67px;
+
+  width: 100%;
+  min-height: 67px;
+
+  cursor: pointer;
+
+  transition-duration: .2s;
+
+  &:hover,
+  &:focus {
+    animation-name: shadow;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  &:active {
+    animation: none;
+    opacity: .3;
+  }
+}
+
+.games-block__image {
+  width: 56.88%;
+
+  background-color: $background-blue;
+  background-image: url('../img/training_man.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/training_man_2x.jpg');
+  }
+}
+
+@media (max-width: $tablet-only) {
+  .games-block__text {
     display: flex;
     flex-direction: column;
 
-    width: 64px;
+    width: 31.34%;
+    padding-top: 51px;
+    padding-right: 5.86%;
+    padding-bottom: 51px;
+    padding-left: 5.86%;
+
+    align-items: center;
+  }
+
+  .games-block__text-wrapper {
+    margin-bottom: 15px;
+
+    & h2 {
+      font-size: 52px;
+      line-height: 52px;
+
+      width: 117px;
+    }
+
+    &+p {
+      font-size: 12px;
+      line-height: 18px;
+
+      margin-bottom: 36px;
+    }
+  }
+
+  .games-block__dates-wrapper {
+    margin-left: 29px;
+  }
+
+  .games-block__date-block {
+    width: 42px;
     margin-bottom: 4px;
 
-    & > p
-    {
-        font-size: 18px;
-        line-height: 27px;
-
-        border-bottom: 1px solid $white;
+    &>p {
+      font-size: 12px;
+      line-height: 18px;
     }
+  }
+
+  .games-block__date {
+    &>span {
+      font-size: 24px;
+      line-height: 36px;
+
+      margin-right: 3px;
+    }
+  }
+
+  .games-block__month-and-year {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .games-block__time-block {
+    &>p {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    & span {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  .games-block__button {
+    font-size: 10px;
+    line-height: 12px;
+
+    min-height: 43px;
+  }
+
+  .games-block__image {
+    background-image: url('../img/training_man_tablet.jpg');
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url('../img/training_man_tablet_2x.jpg');
+    }
+  }
 }
 
-.games-block__date
-{
-    display: flex;
 
-    & > span
-    {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 60px;
-
-        margin-right: 7px;
-    }
-}
-
-.games-block__month-and-year
-{
-    font-size: 14px;
-    line-height: 21px;
-
-    display: flex;
+@media (max-width: $mobile-only) {
+  .games-block {
     flex-direction: column;
+  }
 
-    justify-content: center;
-}
+  .games-block__text {
+    width: 72.5%;
+    padding-right: 13.75%;
+    padding-left: 13.75%;
+  }
 
-.games-block__time-block
-{
-    display: flex;
-    flex-direction: column;
-
-    & > p
-    {
-        font-size: 18px;
-        line-height: 27px;
-
-        border-bottom: 1px solid $white;
-    }
-
-    & span
-    {
-        font-size: 40px;
-        font-weight: bold;
-        line-height: 60px;
-    }
-}
-
-.games-block__button
-{
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 67px;
-
+  .games-block__image {
     width: 100%;
-    min-height: 67px;
+    min-height: 292px;
 
-    cursor: pointer;
+    background-image: url('../img/training_man_mobile.jpg');
 
-    &:hover,
-    &:focus
-    {
-        animation-name: shadow;
-        animation-duration: .7s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url('../img/training_man_mobile_2x.jpg');
     }
-
-    &:active
-    {
-        transition-duration: .2s;
-        animation: none;
-
-        opacity: .3;
-    }
-}
-
-.games-block__image
-{
-    width: 56.88%;
-
-    background-color: $background-blue;
-    background-image: url('../img/training_man.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
-    {
-        background-image: url('../img/training_man_2x.jpg');
-    }
-}
-
-@media (max-width: $tablet-only)
-{
-    .games-block__text
-    {
-        display: flex;
-        flex-direction: column;
-
-        width: 31.34%;
-        padding-top: 51px;
-        padding-right: 5.86%;
-        padding-bottom: 51px;
-        padding-left: 5.86%;
-
-        align-items: center;
-    }
-
-    .games-block__text-wrapper
-    {
-        margin-bottom: 15px;
-
-        & h2
-        {
-            font-size: 52px;
-            line-height: 52px;
-
-            width: 117px;
-        }
-
-        & + p
-        {
-            font-size: 12px;
-            line-height: 18px;
-
-            margin-bottom: 36px;
-        }
-    }
-
-    .games-block__dates-wrapper
-    {
-        margin-left: 29px;
-    }
-
-    .games-block__date-block
-    {
-        width: 42px;
-        margin-bottom: 4px;
-
-        & > p
-        {
-            font-size: 12px;
-            line-height: 18px;
-        }
-    }
-
-    .games-block__date
-    {
-        & > span
-        {
-            font-size: 24px;
-            line-height: 36px;
-
-            margin-right: 3px;
-        }
-    }
-
-    .games-block__month-and-year
-    {
-        font-size: 10px;
-        line-height: 15px;
-    }
-
-    .games-block__time-block
-    {
-        & > p
-        {
-            font-size: 12px;
-            line-height: 18px;
-        }
-
-        & span
-        {
-            font-size: 24px;
-            line-height: 36px;
-        }
-    }
-
-    .games-block__button
-    {
-        font-size: 10px;
-        line-height: 12px;
-
-        min-height: 43px;
-    }
-
-    .games-block__image
-    {
-        background-image: url('../img/training_man_tablet.jpg');
-
-
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
-        {
-            background-image: url('../img/training_man_tablet_2x.jpg');
-        }
-    }
-}
-
-
-@media (max-width: $mobile-only)
-{
-    .games-block
-    {
-        flex-direction: column;
-    }
-    .games-block__text
-    {
-        width: 72.5%;
-        padding-right: 13.75%;
-        padding-left: 13.75%;
-    }
-
-    .games-block__image
-    {
-        width: 100%;
-        min-height: 292px;
-
-        background-image: url('../img/training_man_mobile.jpg');
-
-
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
-        {
-            background-image: url('../img/training_man_mobile_2x.jpg');
-        }
-    }
+  }
 }

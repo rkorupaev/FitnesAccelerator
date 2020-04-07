@@ -1,376 +1,350 @@
-.gym-block
-{
-    display: flex;
+.gym-block {
+  display: flex;
 
-    width: 100%;
-    max-width: $desktop-width;
-    min-height: 756px;
+  width: 100%;
+  max-width: $desktop-width;
+  min-height: 756px;
 
-    color: $black;
-    background-color: $white;
+  color: $black;
+  background-color: $white;
 }
 
-.gym-block__wrapper
-{
-    display: flex;
+.gym-block__wrapper {
+  display: flex;
 
-    margin-top: 120px;
-    padding-left: 11.93%;
+  margin-top: 120px;
+  padding-left: 11.93%;
 }
 
-.gym-block__text-block
-{
-    width: 30.5%;
-    padding-left: 60px;
+.gym-block__text-block {
+  width: 30.5%;
+  padding-left: 60px;
 
-    & h2
-    {
-        font-family: $font-primary;
-        font-size: 49px;
-        font-weight: 700;
-        line-height: 49px;
+  & h2 {
+    font-family: $font-primary;
+    font-size: 49px;
+    font-weight: 700;
+    line-height: 49px;
 
-        margin-top: 45px;
-        margin-bottom: 10px;
+    margin-top: 45px;
+    margin-bottom: 10px;
 
-        letter-spacing: .03em;
-    }
+    letter-spacing: .03em;
+  }
 
-    & > p
-    {
-        font-family: $side-text;
-        font-size: 18px;
-        line-height: 27px;
-
-        margin: 0;
-        margin-bottom: 39px;
-    }
-}
-
-.gym-block__text
-{
+  &>p {
     font-family: $side-text;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 27px;
 
     margin: 0;
-
-    &--margin
-    {
-        margin-bottom: 8px;
-    }
+    margin-bottom: 39px;
+  }
 }
 
-.gym-block__images-block
-{
-    position: relative;
+.gym-block__text {
+  font-family: $side-text;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
 
-    width: 660px;
-    height: 401px;
-    margin-left: 7.52%;
+  margin: 0;
 
-    background-color: $main-background;
-    background-image: url('../img/gym.jpg');
-    background-repeat: no-repeat;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx)
-    {
-        background-image: url('../img/gym_2x.jpg');
-    }
+  &--margin {
+    margin-bottom: 8px;
+  }
 }
 
-.gym-block__video-block
-{
-    position: absolute;
-    bottom: -115px;
-    left: -63px;
+.gym-block__images-block {
+  position: relative;
 
+  width: 660px;
+  height: 401px;
+  margin-left: 7.52%;
+
+  background-color: $main-background;
+  background-image: url('../img/gym.jpg');
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/gym_2x.jpg');
+  }
+}
+
+.gym-block__video-block {
+  position: absolute;
+  bottom: -115px;
+  left: -63px;
+
+  width: 364px;
+  height: 228px;
+
+  & img {
     width: 364px;
     height: 228px;
+  }
 
-    & img
-    {
-        width: 364px;
-        height: 228px;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 364px;
+    height: 228px;
+    background-color: $gym-video-background;
+  }
 }
 
-.gym-block__play-icon
-{
+.gym-block__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+
+  transition-duration: .2s;
+
+  &::after {
     position: absolute;
-    top: 50%;
+    z-index: -1;
+    top: -26px;
+    left: -24px;
+
+    width: 72px;
+    height: 72px;
+
+    content: '';
+
+    border-radius: 50px;
+    background: $gradient;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: -41px;
+    left: -39px;
+
+    width: 97px;
+    height: 97px;
+
+    content: '';
+
+    opacity: .3;
+    border: 2px solid $background-color;
+    border-radius: 50px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: .7;
+  }
+
+  &:active {
+    opacity: .4;
+  }
+}
+
+
+@media (max-width: $tablet-only) {
+  .gym-block {
+    flex-direction: column;
+
+    padding-top: 97px;
+    padding-bottom: 178px;
+
+    align-items: center;
+  }
+
+  .gym-block__wrapper {
+    flex-direction: column;
+
+    margin-top: 97px;
+    padding: 0;
+
+    align-items: center;
+  }
+
+  .gym-block__text-block {
+    width: 65.36%;
+    margin-bottom: 10px;
+    padding: 0;
+
+    text-align: center;
+
+    & h2 {
+      font-size: 42px;
+      line-height: 42px;
+
+      margin: 0;
+      margin-bottom: 11px;
+    }
+
+    & p {
+      margin-bottom: 34px;
+    }
+  }
+
+  .gym-block__text {
+    width: auto;
+  }
+
+  .gym-block__text--disable {
+    display: none;
+  }
+
+  .gym-block__images-block {
+    width: 678px;
+    height: 345px;
+    margin: 0;
+
+    background-size: cover;
+  }
+
+  .gym-block__video-block {
+    position: absolute;
+    bottom: -48%;
     left: 50%;
 
-    cursor: pointer;
+    width: 266px;
+    height: 167px;
+
     transform: translate(-50%, -50%);
 
-    &::after
-    {
-        position: absolute;
-        z-index: -1;
-        top: -26px;
-        left: -24px;
-
-        width: 72px;
-        height: 72px;
-
-        content: '';
-
-        border-radius: 50px;
-        background: $gradient;
+    & img {
+      width: 266px;
+      height: 167px;
     }
 
-    &::before
-    {
-        position: absolute;
-        z-index: -1;
-        top: -41px;
-        left: -39px;
+    &::after {
+      width: 266px;
+      height: 167px;
+    }
+  }
 
-        width: 97px;
-        height: 97px;
+  .gym-block__play-icon {
+    position: absolute;
+    top: 50%;
+    left: 49.5%;
 
-        content: '';
+    transform: translate(-50%, -50%);
 
-        opacity: .3;
-        border: 2px solid $background-color;
-        border-radius: 50px;
+    & svg {
+      width: 12px;
+      height: 12px;
     }
 
-    &:hover,
-    &:focus
-    {
-        transition-duration: .2s;
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: -17px;
+      left: -14px;
 
-        opacity: .7;
+      width: 52px;
+      height: 52px;
+
+      content: '';
+
+      border-radius: 50px;
+      background: $gradient;
     }
 
-    &:active
-    {
-        transition-duration: .2s;
+    &::before {
+      position: absolute;
+      z-index: -1;
+      top: -27px;
+      left: -23px;
 
-        opacity: .4;
+      width: 70px;
+      height: 70px;
+
+      content: '';
+
+      opacity: .3;
+      border: 2px solid $background-color;
+      border-radius: 50px;
     }
+  }
 }
 
+@media (max-width: $mobile-only) {
+  .gym-block {
+    min-height: 925px;
+    padding-top: 66px;
+    padding-bottom: 70px;
 
-@media (max-width: $tablet-only)
-{
-    .gym-block
-    {
-        flex-direction: column;
+    align-items: flex-start;
+  }
 
-        padding-top: 97px;
-        padding-bottom: 178px;
+  .gym-block__wrapper {
+    margin-top: 70px;
+  }
 
-        align-items: center;
+  .gym-block__text-block {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 0 4.68%;
+
+    text-align: left;
+
+    & h2 {
+      font-size: 32px;
+      line-height: 32px;
+
+      margin-bottom: 7px;
     }
 
-    .gym-block__wrapper
-    {
-        flex-direction: column;
+    & p {
+      margin-bottom: 24px;
+    }
+  }
 
-        margin-top: 97px;
-        padding: 0;
+  .gym-block__text {
+    width: 88.9%;
+  }
 
-        align-items: center;
+  .gym-block__images-block {
+    width: 100%;
+    height: 313px;
+
+    background-position-x: 100%;
+  }
+
+  .gym-block__video-block {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    width: 320px;
+    height: 167px;
+    margin: 0 auto;
+    padding-top: 354px;
+
+    transform: translate(0, 0);
+
+    & img {
+      width: 320px;
+      height: 167px;
     }
 
-    .gym-block__text-block
-    {
-        width: 65.36%;
-        margin-bottom: 10px;
-        padding: 0;
+    &::after {
+      width: 320px;
+      height: 167px;
+    }
+  }
 
-        text-align: center;
+  .gym-block__play-icon {
+    top: 84%;
+    left: 51%;
 
-        & h2
-        {
-            font-size: 42px;
-            line-height: 42px;
-
-            margin: 0;
-            margin-bottom: 11px;
-        }
-
-        & p
-        {
-            margin-bottom: 34px;
-        }
+    &::after {
+      left: -17px;
     }
 
-    .gym-block__text
-    {
-        width: auto;
+    &::before {
+      left: -28px;
     }
-
-    .gym-block__text--disable
-    {
-        display: none;
-    }
-
-    .gym-block__images-block
-    {
-        width: 678px;
-        height: 345px;
-        margin: 0;
-
-        background-size: cover;
-    }
-
-    .gym-block__video-block
-    {
-        position: absolute;
-        bottom: -48%;
-        left: 50%;
-
-        width: 266px;
-        height: 167px;
-
-        transform: translate(-50%, -50%);
-
-        & img
-        {
-            width: 266px;
-            height: 167px;
-        }
-    }
-
-    .gym-block__play-icon
-    {
-        position: absolute;
-        top: 50%;
-        left: 49.5%;
-
-        transform: translate(-50%, -50%);
-
-        & svg
-        {
-            width: 12px;
-            height: 12px;
-        }
-
-        &::after
-        {
-            position: absolute;
-            z-index: -1;
-            top: -17px;
-            left: -14px;
-
-            width: 52px;
-            height: 52px;
-
-            content: '';
-
-            border-radius: 50px;
-            background: $gradient;
-        }
-
-        &::before
-        {
-            position: absolute;
-            z-index: -1;
-            top: -27px;
-            left: -23px;
-
-            width: 70px;
-            height: 70px;
-
-            content: '';
-
-            opacity: .3;
-            border: 2px solid $background-color;
-            border-radius: 50px;
-        }
-    }
-}
-
-@media (max-width: $mobile-only)
-{
-    .gym-block
-    {
-        min-height: 925px;
-        padding-top: 66px;
-        padding-bottom: 70px;
-
-        align-items: flex-start;
-    }
-
-    .gym-block__wrapper
-    {
-        margin-top: 70px;
-    }
-
-    .gym-block__text-block
-    {
-        width: 90%;
-        margin-bottom: 10px;
-        padding: 0 4.68%;
-
-        text-align: left;
-
-        & h2
-        {
-            font-size: 32px;
-            line-height: 32px;
-
-            margin-bottom: 7px;
-        }
-
-        & p
-        {
-            margin-bottom: 24px;
-        }
-    }
-
-    .gym-block__text
-    {
-        width: 88.9%;
-    }
-
-    .gym-block__images-block
-    {
-        width: 100%;
-        height: 313px;
-
-        background-position-x: 100%;
-    }
-
-    .gym-block__video-block
-    {
-        position: relative;
-        top: 0;
-        left: 0;
-
-        width: 100%;
-        width: 320px;
-        height: 167px;
-        margin: 0 auto;
-        padding-top: 354px;
-
-        transform: translate(0, 0);
-
-        & img
-        {
-            width: 320px;
-            height: 167px;
-        }
-    }
-
-    .gym-block__play-icon
-    {
-        top: 84%;
-        left: 51%;
-
-        &::after
-        {
-            left: -17px;
-        }
-
-        &::before
-        {
-            left: -28px;
-        }
-    }
+  }
 }
