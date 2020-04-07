@@ -5,11 +5,14 @@
     display: flex;
 
     width: 100%;
+    min-width: 1160px;
     margin-top: 39px;
 
     list-style: none;
 
     color: $black;
+
+    flex-wrap: wrap;
 }
 
 .passtype-list__item
@@ -20,6 +23,7 @@
     box-sizing: border-box;
     width: 360px;
     margin-right: 40px;
+    margin-bottom: 40px;
     padding-top: 55px;
 
     border: 8px solid transparent;
@@ -53,7 +57,7 @@
     &:hover,
     &:focus
     {
-        transition-duration: .2s;
+        transition-duration: .3s;
 
         border: 8px solid $background-color;
         outline: none;
@@ -77,6 +81,8 @@
 
     & span
     {
+        font-weight: 400;
+
         margin-left: 11px;
 
         color: $black;
@@ -88,7 +94,12 @@
     position: absolute;
     z-index: -1;
     top: -54px;
-    left: -19px;
+
+    display: flex;
+
+    width: 100%;
+
+    justify-content: center;
 
     & span
     {
@@ -106,10 +117,10 @@
 {
     font-size: 12px;
     font-weight: 700;
-    line-height: 14px;
+    line-height: 62px;
 
     width: 206px;
-    min-height: 66px;
+    min-height: 62px;
     margin-bottom: 59px;
 
     cursor: pointer;
@@ -120,7 +131,7 @@
     &:hover,
     &:focus
     {
-        transition-duration: .2s;
+        transition-duration: .4s;
 
         color: $white;
         border: none;
@@ -130,7 +141,7 @@
 
     &:active
     {
-        transition-duration: .2s;
+        transition-duration: .4s;
 
         opacity: .5;
     }
