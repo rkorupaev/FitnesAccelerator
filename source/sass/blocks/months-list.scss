@@ -15,7 +15,7 @@
   text-transform: none;
 
   color: $grey;
-  border-bottom: 2px solid rgba(120, 120, 120, .2);
+  border-bottom: 2px solid $border-color;
 
   & li {
     min-height: 44px;
@@ -28,17 +28,35 @@
 
   & a {
     cursor: pointer;
+    position: relative;
 
     transition-duration: .3s;
 
     outline: none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: $red;
+      transform: scale(0);
+    }
+
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transition-duration: .2s;
+      transform: scale(1);
+    }
   }
 
-  & a:hover,
-  & a:focus {
-    color: $black;
-    border-bottom: 2px solid $red;
-  }
 }
 
 @media (max-width: $tablet-only) {
@@ -60,8 +78,7 @@
     font-size: 16px;
     line-height: 24px;
 
-    min-width: 100%;
-    max-width: 332px;
+    min-width: 290px;
     min-height: 39px;
 
     & li {
