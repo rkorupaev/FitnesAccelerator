@@ -3,7 +3,7 @@
   position: relative;
   font-family: $side-text;
 
-  display: flex;
+  display: none;
 
   width: 100%;
   min-width: 1160px;
@@ -32,6 +32,10 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url('../img/weights_2x.png');
     }
+  }
+
+  &--active {
+    display: flex;
   }
 }
 

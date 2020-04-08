@@ -1,15 +1,18 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
+(function() {
+  let monthToggler = document.querySelectorAll(".months-list li a");
+  let tabIndex = 0;
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
-  }
-});
+  monthToggler = Array.prototype.slice.call(monthToggler, 0);
+  monthToggler.forEach((toggler) => {
+    toggler.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      tabIndex = document.querySelector(toggler.getAttribute("href"));
+      document.querySelector(".months-list .active").classList.remove("active");
+      document.querySelector(".passtype-list--active").classList.remove("passtype-list--active");
+      toggler.classList.add('active');
+      tabIndex.classList.add('passtype-list--active');
+    })
+  })
+})();

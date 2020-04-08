@@ -86,11 +86,11 @@
         <div class="passes-block__container container">
           <h2>Абонементы</h2>
           <ul class="passes-block__months-list months-list">
-            <li><a href="#">1 месяц</a></li>
-            <li><a href="#">6 месяцев</a></li>
-            <li><a href="#">12 месяцев</a></li>
+            <li><a href="#tab1" class="active">1 месяц</a></li>
+            <li><a href="#tab2">6 месяцев</a></li>
+            <li><a href="#tab3">12 месяцев</a></li>
           </ul>
-          <ul class="passes-block__passtype-list passtype-list">
+          <ul class="passes-block__passtype-list passtype-list passtype-list--active" id="tab1">
             <li class="passtype-list__item" tabindex="0">
               <h3>С тренером</h3>
               <p>12 занятий</p>
@@ -121,6 +121,76 @@
                   <span>2700</span>
                 </div>
                 <p>2700<span>₽</span></p>
+              </div>
+              <a class="passtype-list__button button" href="#">купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="passes-block__passtype-list passtype-list" id="tab2">
+            <li class="passtype-list__item" tabindex="0">
+              <h3>С тренером</h3>
+              <p>60 занятий</p>
+              <div class="passtype-list__price">
+                <div class="passtype-list__price-shadow">
+                  <span>30000</span>
+                </div>
+                <p>30000<span>₽</span></p>
+              </div>
+              <a class="passtype-list__button button" href="#">купить абонемент</a>
+            </li>
+            <li class="passtype-list__item" tabindex="0">
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <div class="passtype-list__price">
+                <div class="passtype-list__price-shadow">
+                  <span>10200</span>
+                </div>
+                <p>10200<span>₽</span></p>
+              </div>
+              <a class="passtype-list__button button" href="#">купить абонемент</a>
+            </li>
+            <li class="passtype-list__item" tabindex="0">
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <div class="passtype-list__price">
+                <div class="passtype-list__price-shadow">
+                  <span>18200</span>
+                </div>
+                <p>18200<span>₽</span></p>
+              </div>
+              <a class="passtype-list__button button" href="#">купить абонемент</a>
+            </li>
+          </ul>
+          <ul class="passes-block__passtype-list passtype-list" id="tab3">
+            <li class="passtype-list__item" tabindex="0">
+              <h3>С тренером</h3>
+              <p>144 занятий</p>
+              <div class="passtype-list__price">
+                <div class="passtype-list__price-shadow">
+                  <span>60000</span>
+                </div>
+                <p>60000<span>₽</span></p>
+              </div>
+              <a class="passtype-list__button button" href="#">купить абонемент</a>
+            </li>
+            <li class="passtype-list__item" tabindex="0">
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <div class="passtype-list__price">
+                <div class="passtype-list__price-shadow">
+                  <span>20400</span>
+                </div>
+                <p>20400<span>₽</span></p>
+              </div>
+              <a class="passtype-list__button button" href="#">купить абонемент</a>
+            </li>
+            <li class="passtype-list__item" tabindex="0">
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <div class="passtype-list__price">
+                <div class="passtype-list__price-shadow">
+                  <span>32400</span>
+                </div>
+                <p>32400<span>₽</span></p>
               </div>
               <a class="passtype-list__button button" href="#">купить абонемент</a>
             </li>
@@ -156,6 +226,7 @@
     </main>
     <footer class="main-footer"></footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
