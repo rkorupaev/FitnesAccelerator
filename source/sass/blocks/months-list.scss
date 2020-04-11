@@ -45,14 +45,15 @@
       transform: scale(0);
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       opacity: 0.5;
     }
 
     &--active {
+      color: $black;
+      opacity: 1;
+
       &:after {
-        color: $black;
         transition-duration: .2s;
         transform: scale(1);
       }
