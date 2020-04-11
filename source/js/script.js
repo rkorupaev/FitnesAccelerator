@@ -1,17 +1,17 @@
 'use strict';
 
 (function() {
-  let monthToggler = document.querySelectorAll(".months-list li a");
-  let tabIndex = 0;
-
+  let monthToggler = document.querySelectorAll(".months-list__item");
   monthToggler = Array.prototype.slice.call(monthToggler, 0);
+
   monthToggler.forEach((toggler) => {
     toggler.addEventListener("click", (evt) => {
       evt.preventDefault();
-      tabIndex = document.querySelector(toggler.getAttribute("href"));
-      document.querySelector(".months-list .active").classList.remove("active");
+      let tabIndex = document.querySelector(toggler.getAttribute("href"));
+      console.log(tabIndex);
+      document.querySelector(".months-list .months-list__item--active").classList.remove("months-list__item--active");
       document.querySelector(".passtype-list--active").classList.remove("passtype-list--active");
-      toggler.classList.add('active');
+      toggler.classList.add('months-list__item--active');
       tabIndex.classList.add('passtype-list--active');
     })
   })

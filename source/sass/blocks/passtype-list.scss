@@ -15,7 +15,6 @@
 
   flex-wrap: wrap;
 
-
   &:after {
     position: absolute;
     right: -286px;
@@ -36,6 +35,9 @@
 
   &--active {
     display: flex;
+
+    animation-name: unfade;
+    animation-duration: 1.5s;
   }
 }
 
