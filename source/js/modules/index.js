@@ -8,7 +8,6 @@
     toggler.addEventListener("click", (evt) => {
       evt.preventDefault();
       let tabIndex = document.querySelector(toggler.getAttribute("href"));
-      console.log(tabIndex);
       document.querySelector(".months-list .months-list__item--active").classList.remove("months-list__item--active");
       document.querySelector(".passtype-list--active").classList.remove("passtype-list--active");
       toggler.classList.add('months-list__item--active');
