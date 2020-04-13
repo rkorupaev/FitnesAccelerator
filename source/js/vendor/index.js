@@ -31,5 +31,4 @@ import Swiper from 'swiper';
       }
     }
   });
-
 })();
