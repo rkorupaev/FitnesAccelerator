@@ -23,3 +23,26 @@
     }
 }
 
+@media (max-width: $tablet-only) {
+    .advantages-block__container {
+        & h2 {
+            font-size: 42px;
+            line-height: 42px;
+
+            margin-bottom: 61px;
+        }
+    }
+}
+
+@media (max-width: $mobile-only) {
+    .advantages-block__container {
+        text-align: center;
+
+        & h2 {
+            font-size: 32px;
+            line-height: 32px;
+
+            margin-bottom: 60px;
+        }
+    }
+}

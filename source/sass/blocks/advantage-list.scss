@@ -26,12 +26,13 @@
     &--absolute {
         position: absolute;
         top: 0;
-        left: 50%;
+        left: 48%;
 
         display: flex;
         flex-direction: column;
 
         width: 20.68%;
+        height: 100%;
 
         transform: translateX(-50%);
 
@@ -39,6 +40,36 @@
         background-color: $advantages-block-background;
 
         align-items: center;
+
+        & .advantage-list__number-block {
+            font-size: 74px;
+            line-height: 111px;
+
+            margin-top: 50px;
+
+            background: $white;
+            background-clip: text;
+        }
+
+        & .advantage-list__text-block {
+            display: flex;
+            flex-direction: column;
+
+            width: 77.4%;
+            margin: 0;
+
+            text-align: center;
+
+            align-items: center;
+
+            & h3 {
+                font-size: 26px;
+                line-height: 39px;
+
+                margin: 0;
+                margin-bottom: 35px;
+            }
+        }
     }
 
     &--border {
@@ -47,6 +78,11 @@
 }
 
 .advantage-list__number-block {
+    background: $advantages-block-numbers;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
     & p {
         font-size: 71px;
         font-weight: 700;
@@ -75,5 +111,147 @@
         font-size: 16px;
         font-weight: 300;
         line-height: 22px;
+    }
+}
+
+
+@media (max-width: $tablet-only) {
+    .advantage-list__item {
+        width: 45.58%;
+        min-height: 112px;
+
+        &--border {
+            border: none;
+        }
+
+        &:nth-child(2n) {
+            margin-left: 8.84%;
+        }
+
+        &--absolute {
+            position: relative;
+            top: 0;
+            left: 0;
+
+            width: 65.19%;
+            min-height: 239px;
+            margin: 0 17.4%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            transform: translateX(0);
+
+            & .advantage-list__number-block {
+                margin-top: 25px;
+            }
+
+            & .advantage-list__text-block {
+                width: 38.91%;
+
+                & h3 {
+                    font-size: 22px;
+                    line-height: 33px;
+
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .advantage-list__number-block {
+        & p {
+            font-size: 58px;
+            line-height: 87px;
+        }
+    }
+
+    .advantage-list__text-block {
+        margin-left: 29px;
+
+        & h3 {
+            font-size: 20px;
+            line-height: 30px;
+
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .advantage-list__item--order-first {
+        order: 1;
+    }
+
+    .advantage-list__item--order-last {
+        order: 2;
+    }
+}
+
+@media (max-width: $mobile-only) {
+    .advantage-list__item {
+        flex-direction: column;
+
+        width: 100%;
+        margin-bottom: 50px;
+
+        align-items: center;
+
+        &:nth-child(2n) {
+            margin-left: 0;
+        }
+
+        &--absolute {
+            position: relative;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            min-height: 239px;
+            margin: 0;
+
+            transform: translateX(0);
+
+            & .advantage-list__number-block {
+                margin-top: 25px;
+            }
+
+            & .advantage-list__text-block {
+                width: 38.91%;
+
+                & h3 {
+                    font-size: 22px;
+                    line-height: 33px;
+
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .advantage-list__number-block {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        & p {
+            font-size: 58px;
+            line-height: 87px;
+        }
+    }
+
+    .advantage-list__text-block {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0;
+
+        align-items: center;
+
+        & h3 {
+            font-size: 20px;
+            line-height: 30px;
+
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
     }
 }
