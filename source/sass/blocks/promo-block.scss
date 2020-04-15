@@ -1,0 +1,60 @@
+.promo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 62px;
+    color: $black;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.promo-block_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: $side-text;
+}
+
+.promo-block__image-block {
+  display: flex;
+  width: 560px;
+  min-height: 462px;
+}
+
+.promo-block__text {
+  width: 34%;
+  background-color: $background-red;
+  color: $white;
+  padding: 0 45px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+
+  & h3 {
+    font-size: 28px;
+    line-height: 44px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  & p {
+    font-size: 70px;
+    line-height: 109px;
+    font-weight: 700;
+  }
+}
+
+.promo-block__image {
+  width: 50%;
+  background-color: $background-blue;
+  background-image: url("../img/actions_girl.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/actions_girl_2x.jpg");
+  }
+}
