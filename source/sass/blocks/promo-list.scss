@@ -25,6 +25,7 @@
   & p {
     font-size: 16px;
     line-height: 22px;
+    margin-bottom: 15px;
   }
 
   &:before {
@@ -62,5 +63,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-only) {
+  .promo-list__item {
+    width: 37.46%;
   }
 }
