@@ -91,10 +91,9 @@
   !*** ./js/modules/index.js ***!
   \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\n\n(function () {\n  var monthToggler = document.querySelectorAll(\".months-list__item\");\n  monthToggler = Array.prototype.slice.call(monthToggler, 0);\n  monthToggler.forEach(function (toggler) {\n    toggler.addEventListener(\"click\", function (evt) {\n      evt.preventDefault();\n      var tabIndex = document.querySelector(toggler.getAttribute(\"href\"));\n      document.querySelector(\".months-list .months-list__item--active\").classList.remove(\"months-list__item--active\");\n      document.querySelector(\".passtype-list--active\").classList.remove(\"passtype-list--active\");\n      toggler.classList.add('months-list__item--active');\n      tabIndex.classList.add('passtype-list--active');\n    });\n  });\n})();\n\n//# sourceURL=webpack:///./js/modules/index.js?");
+eval("var monthToggler = document.querySelectorAll(\".months-list__item\");\nmonthToggler = Array.prototype.slice.call(monthToggler, 0);\nmonthToggler.forEach(function (toggler) {\n  toggler.addEventListener(\"click\", function (evt) {\n    evt.preventDefault();\n    var tabIndex = document.querySelector(toggler.getAttribute(\"href\"));\n    document.querySelector(\".months-list .months-list__item--active\").classList.remove(\"months-list__item--active\");\n    document.querySelector(\".passtype-list--active\").classList.remove(\"passtype-list--active\");\n    toggler.classList.add('months-list__item--active');\n    tabIndex.classList.add('passtype-list--active');\n  });\n});\nvar mySwiper = new Swiper('.swiper-container', {\n  // Optional parameters\n  direction: 'horizontal',\n  loop: true,\n  grabCursor: true,\n  speed: 1500,\n  // Navigation arrows\n  navigation: {\n    nextEl: '.swiper-button-next',\n    prevEl: '.swiper-button-prev'\n  },\n  breakpoints: {\n    320: {\n      slidesPerView: 1,\n      spaceBetween: 47,\n      slidesPerGroup: 1\n    },\n    768: {\n      slidesPerView: 2,\n      spaceBetween: 30,\n      slidesPerGroup: 2\n    },\n    1200: {\n      slidesPerView: 4,\n      spaceBetween: 40,\n      slidesPerGroup: 4\n    }\n  }\n});\n\n//# sourceURL=webpack:///./js/modules/index.js?");
 
 /***/ })
 

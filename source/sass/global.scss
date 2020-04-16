@@ -45,10 +45,10 @@ a {
 .container {
   box-sizing: border-box;
   width: 100%;
-  max-width: $desktop-width;
+  max-width: 1250px;
   margin: 0 auto;
-  padding-right: 7.53%;
-  padding-left: 7.53%;
+  padding-right: 45px;
+  padding-left: 45px;
 }
 
 @media (max-width: $tablet-only) {
@@ -57,8 +57,8 @@ a {
   }
 
   .container {
-    padding-right: 5.85%;
-    padding-left: 5.85%;
+    padding-right: 45px;
+    padding-left: 45px;
   }
 }
 
@@ -68,8 +68,8 @@ a {
   }
 
   .container {
-    padding-right: 4.68%;
-    padding-left: 4.68%;
+    padding-right: 15px;
+    padding-left: 15px;
 
     &--mobile {
       padding-right: 0;

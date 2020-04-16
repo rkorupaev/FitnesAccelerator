@@ -34,6 +34,9 @@
   padding-top: 45px;
   padding-bottom: 50px;
 
+  display: flex;
+  flex-direction: column;
+
   & h3 {
     font-size: 28px;
     line-height: 44px;
@@ -41,10 +44,38 @@
     margin: 0;
   }
 
-  & p {
+  & span {
     font-size: 70px;
-    line-height: 109px;
+    line-height: 70px;
     font-weight: 700;
+  }
+
+  & p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 35px;
+  }
+}
+
+.promo-block__button {
+  width: 79px;
+  height: auto;
+  border-bottom: 1px solid $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  margin-top: auto;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -57,4 +88,11 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/actions_girl_2x.jpg");
   }
+}
+
+.promo-block__text-block {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

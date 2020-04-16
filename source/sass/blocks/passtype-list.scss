@@ -95,13 +95,13 @@
     border-image-source: $button-gradient;
     border-image-slice: 8;
     border-image-repeat: round;
+    transition-duration: 0.4s;
   }
 
   &:hover:before,
   &:focus:before {
     opacity: 1;
     outline: none;
-    transition-duration: 0.4s;
   }
 }
 
