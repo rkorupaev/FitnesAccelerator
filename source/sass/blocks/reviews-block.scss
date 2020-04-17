@@ -1,0 +1,121 @@
+.reviews-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+  position: relative;
+
+  & h2 {
+    margin: 0;
+    margin-bottom: 62px;
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+    color: $black;
+  }
+}
+
+.reviews-block__button-wrapper {
+  position: relative;
+  height: 0;
+  width: 560px;
+}
+
+.reviews-block__prev,
+.reviews-block__next {
+  border: 1px solid transparent;
+  top: 92px;
+  outline: none;
+  position: absolute;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 23px;
+    height: 2px;
+    background-color: $arrow-grey;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 36px;
+    width: 23px;
+    height: 2px;
+    background-color: $arrow-grey;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+}
+
+.reviews-block__prev {
+  left: -65px;
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+}
+
+.reviews-block__next {
+  right: -65px;
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+
+.reviews-block__slider {
+  width: 560px;
+}
+
+.reviews-block__slide {
+  display: flex;
+  background-color: $advantages-block-background;
+  color: $white;
+  min-height: 128px;
+  padding-top: 57px;
+  padding-bottom: 57px;
+
+  & img {
+    width: 80px;
+    height: 80px;
+    margin-left: 62px;
+    margin-right: 28px;
+  }
+}
+
+.reviews-block__text {
+  padding-right: 62px;
+  font-family: $side-text;
+
+  & h3 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+  }
+
+  & p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

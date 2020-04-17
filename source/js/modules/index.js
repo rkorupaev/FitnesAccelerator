@@ -12,7 +12,7 @@
     })
   })
 
-  let mySwiper = new Swiper('.swiper-container', {
+  let mySwiper = new Swiper('.coaches-block__slider', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -41,4 +41,17 @@
         slidesPerGroup: 4
       }
     }
+  });
+
+let mySwiper2 = new Swiper('.reviews-block__slider', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    grabCursor: true,
+    speed: 1500,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.reviews-block__next',
+      prevEl: '.reviews-block__prev',
+    },
   });
