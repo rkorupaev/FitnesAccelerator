@@ -1,0 +1,44 @@
+.contact-list {
+    font-family: $side-text;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 230px;
+
+    list-style: none;
+
+    &--border {
+        border-right: 1px solid $contacts-block-top-border;
+    }
+
+    &--flex-end {
+        align-items: flex-end;
+
+        & li {
+            width: 110px;
+        }
+    }
+
+    & h3 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    & p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+.contact-list__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin: 0;
+    }
+}

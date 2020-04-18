@@ -1,0 +1,67 @@
+.input-list {
+    font-family: $side-text;
+    font-size: 14px;
+    line-height: 16px;
+
+    display: flex;
+
+    margin-bottom: 30px;
+
+    list-style: none;
+
+    justify-content: space-between;
+
+    & label {
+        display: none;
+    }
+
+    & input {
+        font-size: 14px;
+        line-height: 16px;
+
+        width: 190px;
+        height: 28px;
+
+        cursor: pointer;
+        transition-duration: 0.3s;
+
+        border: none;
+        border-bottom: 1px solid $white;
+        outline: none;
+        background-color: $black;
+
+        &::placeholder {
+            color: $white;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: lighten($black, 5%);
+        }
+
+        &:active,
+        &:focus {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.form-block__button {
+    font-size: 14px;
+    line-height: 16px;
+
+    width: 100%;
+
+    transition-duration: 0.3s;
+
+    padding: 14px;
+
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}

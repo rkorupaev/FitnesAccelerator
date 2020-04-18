@@ -457,43 +457,51 @@
           </ul>
         </div>
       </section>
-      <section class="contacts-block container">
-        <form class="contacts-block__form form-block">
-          <h2>Бесплатное занятие</h2>
-          <ul class="form-block__input-list input-list">
-            <li class="input-list__item">
-              <label for="name">Имя</label>
-              <input id="name" type="text">
-            </li>
-            <li class="input-list__item">
-              <label for="phone">Телефон</label>
-              <input id="phone" type="tel">
-            </li>
-          </ul>
-          <button class="form-block__button button" type="submit">Отправить</button>
-        </form>
-        <div class="contacts-block__contacts">
-          <h2>Контакты</h2>
-          <ul class="contacts-block__text-list text-list">
-            <li class="text-list__item">
-              <h3>Адрес:</h3>
-              <p>г. Омск, ул. 60 лет Октября, 7</p>
-            </li>
-            <li class="text-list__item">
-              <h3>График работы:</h3>
-              <p>Пн-Вс: с 8:00 до 22:00</p>
-            </li>
-          </ul>
-          <ul class="contacts-block__text-list text-list">
-            <li class="text-list__item">
-              <h3>Телефон:</h3>
-              <p>8-800-555-55-55</p>
-            </li>
-            <li class="text-list__item">
-              <h3>Email:</h3>
-              <p>omsk@supergym.ru</p>
-            </li>
-          </ul>
+      <section class="contacts-block">
+        <div class="contacts-block__wrapper container">
+          <div class="contacts-block__form-wrapper">
+            <form class="contacts-block__form form-block">
+              <h2>Бесплатное занятие</h2>
+              <ul class="form-block__input-list input-list">
+                <li class="input-list__item">
+                  <label for="name">Имя</label>
+                  <input id="name" type="text" placeholder="Имя" required>
+                </li>
+                <li class="input-list__item">
+                  <label for="phone">Телефон</label>
+                  <input id="phone" type="tel" placeholder="Телефон" required>
+                </li>
+              </ul>
+              <button class="form-block__button button" type="submit">Отправить</button>
+            </form>
+          </div>
+          <div class="contacts-block__contacts">
+            <div class="contacts-block__contacts-wrapper">
+              <h2>Контакты</h2>
+              <div class="contacts-block__list-wrapper">
+                <ul class="contacts-block__contact-list contact-list contact-list--border">
+                  <li class="contact-list__item">
+                    <h3>Адрес:</h3>
+                    <p>г. Омск, ул. 60 лет Октября, 7</p>
+                  </li>
+                  <li class="contact-list__item">
+                    <h3>График работы:</h3>
+                    <p>Пн-Вс: с 8:00 до 22:00</p>
+                  </li>
+                </ul>
+                <ul class="contacts-block__text-list contact-list contact-list--flex-end">
+                  <li class="contact-list__item">
+                    <h3>Телефон:</h3>
+                    <p>8-800-555-55-55</p>
+                  </li>
+                  <li class="contact-list__item">
+                    <h3>Email:</h3>
+                    <p>omsk@supergym.ru</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
