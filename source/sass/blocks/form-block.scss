@@ -1,4 +1,4 @@
-.input-list {
+.form-block__list {
   font-family: $side-text;
   font-size: 14px;
   line-height: 16px;
@@ -26,7 +26,7 @@
     transition-duration: 0.3s;
 
     border: none;
-    border-bottom: 1px solid $white;
+    border-bottom: 1px solid $contacts-block-top-border;
     outline: none;
     background-color: $black;
 
@@ -62,5 +62,13 @@
 
   &:active {
     transform: scale(0.97);
+  }
+}
+
+@media (max-width: $tablet-only) {
+  .form-block__list {
+    & input {
+      width: 206px;
+    }
   }
 }
