@@ -30,11 +30,11 @@
     cursor: pointer;
     position: relative;
 
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 
     outline: none;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       width: 100%;
@@ -53,8 +53,8 @@
       color: $black;
       opacity: 1;
 
-      &:after {
-        transition-duration: .2s;
+      &::after {
+        transition-duration: 0.2s;
         transform: scale(1);
       }
     }

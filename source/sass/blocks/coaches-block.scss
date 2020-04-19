@@ -22,17 +22,17 @@
   top: 149px;
   outline: none;
 
-  &:after {
+  &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 23px;
     height: 2px;
     background-color: $arrow-grey;
   }
 
-  &:before {
+  &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 35px;
     width: 23px;
     height: 2px;
@@ -43,11 +43,11 @@
 .coaches-block__prev {
   left: -65px;
 
-  &:after {
+  &::after {
     transform: rotate(-45deg);
   }
 
-  &:before {
+  &::before {
     transform: rotate(45deg);
   }
 }
@@ -55,11 +55,11 @@
 .coaches-block__next {
   right: -65px;
 
-  &:after {
+  &::after {
     transform: rotate(45deg);
   }
 
-  &:before {
+  &::before {
     transform: rotate(-45deg);
   }
 }

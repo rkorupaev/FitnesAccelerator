@@ -28,7 +28,7 @@
     margin-bottom: 15px;
   }
 
-  &:before {
+  &::before {
     z-index: -1;
     content: "";
     position: absolute;

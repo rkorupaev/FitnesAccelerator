@@ -85,25 +85,27 @@
   }
 
   &::after {
-    content: "";
     position: absolute;
     left: 0;
+
     width: 364px;
     height: 228px;
+
+    content: "";
+
     background-color: $gym-video-background;
   }
 }
 
 .gym-block__play-icon {
   position: absolute;
+  z-index: 1;
   top: 50%;
   left: 50%;
-  z-index: 1;
 
   cursor: pointer;
-  transform: translate(-50%, -50%);
-
   transition-duration: 0.2s;
+  transform: translate(-50%, -50%);
 
   &::after {
     position: absolute;
@@ -114,7 +116,7 @@
     width: 72px;
     height: 72px;
 
-    content: '';
+    content: "";
 
     border-radius: 50px;
     background: $gradient;
@@ -129,7 +131,7 @@
     width: 97px;
     height: 97px;
 
-    content: '';
+    content: "";
 
     opacity: 0.3;
     border: 2px solid $background-color;
@@ -244,7 +246,7 @@
       width: 52px;
       height: 52px;
 
-      content: '';
+      content: "";
 
       border-radius: 50px;
       background: $gradient;
@@ -259,7 +261,7 @@
       width: 70px;
       height: 70px;
 
-      content: '';
+      content: "";
 
       opacity: 0.3;
       border: 2px solid $background-color;
