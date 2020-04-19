@@ -72,3 +72,19 @@
     }
   }
 }
+
+@media (max-width: $mobile-only) {
+  .form-block__list {
+    flex-direction: column;
+
+    margin: 0;
+
+    & input {
+      width: 100%;
+    }
+  }
+
+  .form-block__item {
+    margin-bottom: 40px;
+  }
+}

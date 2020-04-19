@@ -42,3 +42,11 @@
     margin: 0;
   }
 }
+
+@media (max-width: $tablet-only) {
+  .contact-list {
+    &--flex-end {
+      align-items: center;
+    }
+  }
+}

@@ -82,3 +82,33 @@
     padding-left: 0;
   }
 }
+
+@media (max-width: $mobile-only) {
+  .contacts-block {
+    background: linear-gradient(to bottom, $black 55.7%, $white 50%);
+
+    & h2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  .contacts-block__wrapper {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .contacts-block__form-wrapper {
+    width: 100%;
+  }
+
+  .contacts-block__contacts {
+    width: 472px;
+    margin-top: 70px;
+  }
+
+  .contacts-block__contacts-wrapper {
+    padding-left: 0;
+  }
+}
