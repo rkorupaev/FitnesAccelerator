@@ -11,29 +11,6 @@
   flex-wrap: wrap;
 }
 
-.main-header__logo {
-  font-size: 26px;
-  line-height: 26px;
-
-  width: 89px;
-
-  cursor: pointer;
-  transition-duration: 0.2s;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-
-  outline: none;
-
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
 .main-header__phone {
   font-size: 26px;
   line-height: 26px;
@@ -62,18 +39,6 @@
     padding-bottom: 21px;
   }
 
-  .main-header__logo {
-    font-size: 24px;
-    line-height: 24px;
-
-    width: 82px;
-
-    & svg {
-      width: 82px;
-      height: 17px;
-    }
-  }
-
   .main-header__phone {
     font-size: 24px;
     line-height: 24px;
@@ -88,18 +53,6 @@
   .main-header {
     min-height: 20px;
     padding-bottom: 0;
-  }
-
-  .main-header__logo {
-    font-size: 20px;
-    line-height: 20px;
-
-    width: 68px;
-
-    & svg {
-      width: 68px;
-      height: 15px;
-    }
   }
 
   .main-header__phone {
