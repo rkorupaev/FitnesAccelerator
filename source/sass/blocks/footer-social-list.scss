@@ -28,3 +28,37 @@
     opacity: 0.3;
   }
 }
+
+@media (max-width: $tablet-only) {
+  .footer-social-list {
+    min-width: 100px;
+    margin: 0;
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .footer-social-list {
+    min-width: 143px;
+  }
+
+  .footer-social-list__item--vk {
+    & svg {
+      width: 32px;
+      height: 17px;
+    }
+  }
+
+  .footer-social-list__item--inst {
+    & svg {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .footer-social-list__item--fb {
+    & svg {
+      width: 14px;
+      height: 27px;
+    }
+  }
+}

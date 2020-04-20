@@ -31,3 +31,35 @@
     opacity: 0.3;
   }
 }
+
+@media (max-width: $tablet-only) {
+  .navigation-list {
+    min-width: 391px;
+    margin: 0;
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .navigation-list {
+    min-width: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .navigation-list__item {
+    width: 50%;
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 19px;
+
+    &:first-child {
+      margin-top: 50px;
+    }
+
+    & a {
+      justify-content: flex-start;
+    }
+  }
+}
