@@ -50,3 +50,21 @@
     }
   }
 }
+
+@media (max-width: $mobile-only) {
+  .contact-list {
+    margin-bottom: 20px;
+
+    &--border {
+      border: none;
+    }
+
+    &--flex-end {
+      align-items: flex-start;
+    }
+  }
+
+  .contact-list__item {
+    margin-bottom: 20px;
+  }
+}
