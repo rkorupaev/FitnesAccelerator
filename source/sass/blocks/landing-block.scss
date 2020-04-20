@@ -167,7 +167,9 @@
   .landing-block_text-block {
     position: relative;
 
-    width: 100%;
+    width: 290px;
+
+    margin: 0 auto;
 
     & p {
       font-size: 28px;
@@ -196,8 +198,10 @@
   }
 
   .landing-block__button {
-    width: 100%;
-    min-height: 62px;
+    width: 248px;
+    min-height: 15px;
+    padding: 17px;
+    padding-top: 19px;
   }
 
   .landing-block__social-list {
