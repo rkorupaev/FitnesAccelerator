@@ -9,11 +9,13 @@
   flex-wrap: wrap;
 
   min-height: 108px;
+  height: 108px;
 }
 
 @media (max-width: $tablet-only) {
   .main-footer__container {
     min-height: 114px;
+    height: 114px;
     justify-content: space-between;
   }
 }
@@ -22,6 +24,7 @@
   .main-footer__container {
     position: relative;
     min-height: 260px;
+    height: 260px;
     max-width: 472px;
     padding-top: 35px;
     padding-bottom: 50px;
