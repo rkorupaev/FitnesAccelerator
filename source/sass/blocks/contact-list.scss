@@ -12,8 +12,8 @@
     border-right: 1px solid $contacts-block-top-border;
   }
 
-  &--flex-end {
-    align-items: flex-end;
+  &--alignment {
+    align-items: center;
 
     & li {
       width: 110px;
@@ -45,7 +45,7 @@
 
 @media (max-width: $tablet-only) {
   .contact-list {
-    &--flex-end {
+    &--alignment {
       align-items: center;
     }
   }
@@ -59,7 +59,7 @@
       border: none;
     }
 
-    &--flex-end {
+    &--alignment {
       align-items: flex-start;
     }
   }

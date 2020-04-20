@@ -1,0 +1,12 @@
+.main-footer {
+  background-color: $footer-background;
+  width: 100%;
+}
+
+.main-footer__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  min-height: 108px;
+}
