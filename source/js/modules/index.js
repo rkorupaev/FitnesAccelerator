@@ -55,3 +55,7 @@ let mySwiper2 = new Swiper(`.reviews-block__slider`, {
     prevEl: `.reviews-block__prev`,
   },
 });
+
+let scroll = new SmoothScroll(`a[href*="#"]`, {
+  speed: 500
+});
