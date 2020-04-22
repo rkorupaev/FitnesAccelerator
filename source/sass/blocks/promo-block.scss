@@ -1,78 +1,91 @@
 .promo-block {
   display: flex;
   flex-direction: column;
+
   align-items: center;
 
   & h2 {
-    margin: 0;
-    margin-bottom: 62px;
-    color: $black;
     font-size: 49px;
     line-height: 49px;
+
+    margin: 0;
+    margin-bottom: 62px;
+
     letter-spacing: 0.03em;
+
+    color: $black;
   }
 }
 
 .promo-block__wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
   font-family: $side-text;
+
+  display: flex;
+
+  width: 100%;
+
+  justify-content: space-between;
 }
 
 .promo-block__image-block {
   display: flex;
+
   width: 560px;
   min-height: 462px;
   margin-right: 20px;
 }
 
 .promo-block__text {
+  display: flex;
+  flex-direction: column;
+
   width: 34%;
-  background-color: $background-red;
-  color: $white;
   padding: 0 45px;
   padding-top: 40px;
   padding-bottom: 50px;
 
-  display: flex;
-  flex-direction: column;
+  color: $white;
+  background-color: $background-red;
 
   & h3 {
     font-size: 28px;
-    line-height: 32px;
     font-weight: 700;
+    line-height: 32px;
+
     margin: 0;
   }
 
   & span {
     font-size: 70px;
-    line-height: 70px;
     font-weight: 700;
+    line-height: 70px;
   }
 
   & p {
     font-size: 18px;
     line-height: 25px;
+
     margin-top: 35px;
   }
 }
 
 .promo-block__button {
-  width: 79px;
-  height: auto;
-  border-bottom: 1px solid $white;
-  text-transform: uppercase;
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 16px;
 
+  width: 79px;
+  height: auto;
   margin-top: auto;
+
   transition-duration: 0.3s;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid $white;
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
+    opacity: 0.3;
   }
 
   &:active {
@@ -82,6 +95,7 @@
 
 .promo-block__image {
   width: 50%;
+
   background-color: $background-blue;
   background-image: url("../img/actions_girl.jpg");
   background-repeat: no-repeat;
@@ -93,25 +107,30 @@
 }
 
 .promo-block__text-block {
-  width: 560px;
   display: flex;
   flex-direction: column;
+
+  width: 560px;
+
   justify-content: space-between;
 }
 
 @media (max-width: $tablet-only) {
   .promo-block {
     & h2 {
-      margin-bottom: 50px;
       font-size: 42px;
       line-height: 42px;
+
+      margin-bottom: 50px;
     }
   }
 
   .promo-block__wrapper {
     flex-direction: column;
-    align-items: center;
+
     max-width: 850px;
+
+    align-items: center;
   }
 
   .promo-block__image-block {
@@ -126,6 +145,7 @@
 
   .promo-block__image {
     width: 63%;
+
     background-image: url("../img/actions_girl_tablet.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -134,8 +154,10 @@
   }
 
   .promo-block__text-block {
-    width: 100%;
     flex-direction: row;
+
+    width: 100%;
+
     flex-wrap: wrap;
   }
 }
@@ -159,10 +181,12 @@
   .promo-block__text {
     width: 100%;
     min-height: 200px;
-    padding-left: 0;
     padding-right: 0;
-    align-items: center;
+    padding-left: 0;
+
     text-align: center;
+
+    align-items: center;
 
     & p {
       width: 189px;
@@ -171,13 +195,13 @@
   }
 
   .promo-block__image {
-    min-height: 290px;
-
     width: 100%;
+    min-height: 290px;
   }
 
   .promo-block__text-block {
     flex-direction: column;
+
     flex-wrap: nowrap;
   }
 }

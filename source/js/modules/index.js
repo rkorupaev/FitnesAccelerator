@@ -60,14 +60,34 @@ let scroll = new SmoothScroll(`a[href*="#"]`, {
   speed: 500
 });
 
-let phoneMask = IMask(document.getElementById(`phone`), {
-  mask: '+{7}(3812)000-00-00',
+let phoneInput = document.getElementById(`phone`);
+
+let phoneMask = IMask(phoneInput, {
+  mask: `+{7}(000)000-00-00`,
   lazy: true,
-  placeholderChar: '#'
+  placeholderChar: `#`
 });
 
 let phoneBlock = document.querySelector(`.form-block__item--phone`);
 
-phoneBlock.addEventListener(`mouseover`, ()=> {
-    phoneMask.updateOptions({ lazy: false });
-},true);
+phoneBlock.addEventListener(`focus`, () => {
+  phoneMask.updateOptions({lazy: false});
+}, true);
+
+phoneBlock.addEventListener(`mouseover`, () => {
+  phoneMask.updateOptions({lazy: false});
+}, true);
+
+// let formTest = document.querySelector(`.form-block`);
+
+// formTest.addEventListener(`submit`, (evt) => {
+//   evt.preventDefault();
+//   if (!phoneInput.checkValidity()) {
+//     evt.preventDefault();
+//     phoneInput.setCustomValidity(`Заполните это поле.`);
+//     console.log(`worked`);
+
+//     console.dir(phoneInput);
+//     console.dir(phoneMask);
+//   }
+// });

@@ -1,21 +1,9 @@
 .logo {
   width: 89px;
-
-  cursor: pointer;
-  transition-duration: 0.2s;
   letter-spacing: 0.02em;
   text-transform: uppercase;
 
   outline: none;
-
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 @media (max-width: $tablet-only) {

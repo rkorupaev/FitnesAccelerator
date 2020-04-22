@@ -61,7 +61,7 @@
         </div>
         <div class="gym-block__images-block">
           <div class="gym-block__video-block">
-            <button class="gym-block__play-icon" type="button"><svg width="13" height="15" viewBox="0 0 13 15" fill="none">
+            <button class="gym-block__play-icon" type="button" aria-label="Включить видео"><svg width="13" height="15" viewBox="0 0 13 15" fill="none">
                 <use xlink:href="#play_icon"></use>
               </svg>
             </button>
@@ -369,9 +369,9 @@
               </div>
             </div>
             <div class="advantage-list__central-block">
-              <p>100</p>
+              <h3>100</h3>
               <div class="advantage-list__text-block">
-                <h3>Тренажеров</h3>
+                <span>Тренажеров</span>
                 <p>Современные тренажеры на все группы мышц</p>
               </div>
             </div>
@@ -468,12 +468,12 @@
               <h2>Бесплатное занятие</h2>
               <ul class="form-block__list">
                 <li class="form-block__item">
-                  <label for="name">Имя</label>
-                  <input id="name" type="text" placeholder="Имя" required="">
+                  <label for="name">Ваше имя</label>
+                  <input id="name" type="text" placeholder="Имя" aria-label="Введите ваше имя" required="">
                 </li>
                 <li class="form-block__item form-block__item--phone ">
-                  <label for="phone">Телефон</label>
-                  <input id="phone" type="tel" placeholder="Телефон" required="">
+                  <label for="phone">Укажите ваш телефон</label>
+                  <input id="phone" type="tel" placeholder="Телефон" aria-label="Введите ваш контактный телефон" required="">
                 </li>
               </ul>
               <button class="form-block__button button" type="submit">Отправить</button>
@@ -496,11 +496,11 @@
                 <ul class="contacts-block__text-list contact-list contact-list--alignment">
                   <li class="contact-list__item">
                     <h3>Телефон:</h3>
-                    <p>8-800-555-55-55</p>
+                    <a class="contact-list__phone" href="tel:8-800-555-55-55" aria-label="Телефон администратора">8-800-555-55-55</a>
                   </li>
                   <li class="contact-list__item">
                     <h3>Email:</h3>
-                    <p>omsk@supergym.ru</p>
+                    <a class="contact-list__phone" href="mailto:omsk@supergym.ru" aria-label="Электронная почта клуба">omsk@supergym.ru</a>
                   </li>
                 </ul>
               </div>

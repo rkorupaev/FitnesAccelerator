@@ -23,14 +23,82 @@
 
 .contacts-block__form-wrapper {
   width: 50%;
+
+  & form {
+    width: 410px;
+
+    color: $white;
+  }
+
+  & ul {
+    font-family: $side-text;
+    font-size: 14px;
+    line-height: 16px;
+
+    display: flex;
+
+    margin-bottom: 30px;
+
+    list-style: none;
+
+    justify-content: space-between;
+
+    & label {
+      display: none;
+    }
+
+    & input {
+      font-size: 14px;
+      line-height: 16px;
+
+      width: 190px;
+      height: 28px;
+
+      cursor: pointer;
+      transition-duration: 0.3s;
+
+      color: $white;
+      border: none;
+      border-bottom: 1px solid $contacts-block-top-border;
+      outline: none;
+      background-color: $black;
+
+      &::placeholder {
+        color: $white;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: lighten($black, 5%);
+      }
+
+      &:active,
+      &:focus {
+        background-color: lighten($black, 5%);
+      }
+    }
+  }
+
+
+  & button {
+    font-size: 14px;
+    line-height: 16px;
+
+    width: 100%;
+    padding: 14px;
+
+    transition-duration: 0.3s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
 }
-
-.contacts-block__form {
-  width: 410px;
-
-  color: $white;
-}
-
 
 .contacts-block__contacts {
   width: 50%;
@@ -67,10 +135,14 @@
   .contacts-block__form-wrapper {
     width: 472px;
     margin-bottom: 70px;
-  }
 
-  .contacts-block__form {
-    width: 100%;
+    & form {
+      width: 100%;
+    }
+
+    & input {
+      width: 206px;
+    }
   }
 
   .contacts-block__contacts {
@@ -94,15 +166,29 @@
   }
 
   .contacts-block__wrapper {
-    max-width: 472px;
-
     flex-direction: column;
+
+    max-width: 472px;
 
     align-items: center;
   }
 
   .contacts-block__form-wrapper {
     width: 100%;
+
+    & ul {
+      flex-direction: column;
+
+      margin: 0;
+
+      & input {
+        width: 100%;
+      }
+    }
+
+    .form-block__item {
+      margin-bottom: 40px;
+    }
   }
 
   .contacts-block__contacts {

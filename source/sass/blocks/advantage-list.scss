@@ -6,8 +6,8 @@
   display: flex;
   flex-direction: column;
 
-  padding-left: 50px;
   padding-right: 10px;
+  padding-left: 50px;
 
   list-style: none;
 }
@@ -15,7 +15,7 @@
 .advantage-list__item {
   display: flex;
 
-  min-height: 154px;
+  min-height: 72px;
 
   color: $black;
 
@@ -34,14 +34,16 @@
 .advantage-list__number {
   width: 108px;
   height: 53px;
+
   background-repeat: no-repeat;
+  background-size: contain;
 
 
   &--900 {
     background-image: url("../img/900.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/900_2x.jpg");
+      background-image: url("../img/900_2x.png");
     }
   }
 
@@ -49,7 +51,7 @@
     background-image: url("../img/70.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/70_2x.jpg");
+      background-image: url("../img/70_2x.png");
     }
   }
 
@@ -57,7 +59,7 @@
     background-image: url("../img/350.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/350_2x.jpg");
+      background-image: url("../img/350_2x.png");
     }
   }
 
@@ -65,7 +67,7 @@
     background-image: url("../img/5.png");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/5_2x.jpg");
+      background-image: url("../img/5_2x.png");
     }
   }
 }
@@ -115,11 +117,12 @@
 
   align-items: center;
 
-  & > p {
+  & h3 {
     font-size: 74px;
     font-weight: 700;
     line-height: 74px;
 
+    margin: 0;
     margin-top: 55px;
   }
 
@@ -139,7 +142,7 @@
     }
   }
 
-  & h3 {
+  & span {
     font-size: 26px;
     line-height: 39px;
 
@@ -160,11 +163,15 @@
 
 .advantage-list__top-block {
   & .advantage-list__item {
+    padding-bottom: 83px;
+
     border-bottom: 2px solid $advantages-block-border;
   }
 }
 
 .advantage-list__bottom-block {
+  padding-top: 82px;
+
   & .advantage-list__number-block {
     display: flex;
     flex-direction: column;
@@ -182,12 +189,14 @@
 
 @media (max-width: $tablet-only) {
   .advantage-list {
-    padding: 0;
     width: 100%;
+    padding: 0;
   }
 
   .advantage-list__top-block {
     & .advantage-list__item {
+      padding: 0;
+
       border: none;
     }
 
@@ -204,7 +213,7 @@
       background-image: url("../img/900_tablet.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/900_tablet_2x.jpg");
+        background-image: url("../img/900_tablet_2x.png");
       }
     }
 
@@ -212,7 +221,7 @@
       background-image: url("../img/70_tablet.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/70_tablet_2x.jpg");
+        background-image: url("../img/70_tablet_2x.png");
       }
     }
 
@@ -220,7 +229,7 @@
       background-image: url("../img/350_tablet.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/350_tablet_2x.jpg");
+        background-image: url("../img/350_tablet_2x.png");
       }
     }
 
@@ -228,7 +237,7 @@
       background-image: url("../img/5_tablet.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/5_tablet_2x.jpg");
+        background-image: url("../img/5_tablet_2x.png");
       }
     }
   }
@@ -278,7 +287,7 @@
 
     transform: translateX(0);
 
-    & > p {
+    & h3 {
       margin-top: 30px;
     }
 
@@ -286,15 +295,18 @@
       width: 38.91%;
     }
 
-    & h3 {
+    & span {
       font-size: 22px;
       line-height: 33px;
+
       margin-top: 0;
       margin-bottom: 17px;
     }
   }
 
   .advantage-list__bottom-block {
+    padding: 0;
+
     & .advantage-list__number-block {
       justify-content: flex-start;
     }
@@ -317,13 +329,14 @@
   .advantage-list__top-block,
   .advantage-list__bottom-block {
     flex-direction: column;
+
     align-items: center;
   }
 
   .advantage-list__item {
     flex-direction: column;
-    width: 227px;
 
+    width: 227px;
     margin-bottom: 50px;
 
     align-items: center;
@@ -375,7 +388,7 @@
     margin: 0 auto;
     margin-bottom: 50px;
 
-    & > p {
+    & h3 {
       margin-top: 37px;
       margin-bottom: -4px;
     }
@@ -384,9 +397,10 @@
       width: 172px;
     }
 
-    & h3 {
+    & span {
       font-size: 22px;
       line-height: 33px;
+
       margin-top: 0;
       margin-bottom: 10px;
     }
