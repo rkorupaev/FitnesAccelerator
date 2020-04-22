@@ -45,7 +45,7 @@
     width: 23px;
     height: 2px;
 
-    content: "";
+    content: '';
 
     background-color: $arrow-grey;
   }
@@ -57,7 +57,7 @@
     width: 23px;
     height: 2px;
 
-    content: "";
+    content: '';
 
     background-color: $arrow-grey;
   }
@@ -167,10 +167,9 @@
   }
 
   .reviews-block__slide {
+    min-height: 274px;
     padding-top: 50px;
     padding-bottom: 11px;
-
-    min-height: 274px;
 
     & img {
       top: 40px;
@@ -186,13 +185,18 @@
     flex-direction: column;
 
     margin: 0;
-    padding: 0;
+    padding: 0 25px;
 
     align-items: center;
 
     & h3 {
+      width: 65px;
+      margin-right: 16px;
       margin-bottom: 34px;
-      margin-left: 124px;
+
+      word-break: break-word;
+
+      align-self: flex-end;
     }
 
     & p {

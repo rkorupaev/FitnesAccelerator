@@ -23,7 +23,7 @@
 .coaches-block__prev,
 .coaches-block__next {
   position: absolute;
-  top: 149px;
+  top: 122px;
 
   color: $grey;
   border: 1px solid transparent;
@@ -67,10 +67,12 @@
 
   &::after {
     transform: rotate(-45deg);
+    right: 0;
   }
 
   &::before {
     transform: rotate(45deg);
+    right: 0;
   }
 }
 
@@ -79,10 +81,12 @@
 
   &::after {
     transform: rotate(45deg);
+    left: 0;
   }
 
   &::before {
     transform: rotate(-45deg);
+    left: 0;
   }
 }
 
