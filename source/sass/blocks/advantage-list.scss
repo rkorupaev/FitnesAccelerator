@@ -15,7 +15,6 @@
 .advantage-list__item {
   display: flex;
 
-  // width: 34.32%;
   min-height: 154px;
 
   color: $black;
@@ -136,7 +135,8 @@
     align-items: center;
 
     & p {
-      width: 100%;    }
+      width: 100%;
+    }
   }
 
   & h3 {
@@ -231,7 +231,6 @@
         background-image: url("../img/5_tablet_2x.jpg");
       }
     }
-
   }
 
   .advantage-list__item {
@@ -279,11 +278,11 @@
 
     transform: translateX(0);
 
-    &>p {
+    & > p {
       margin-top: 30px;
     }
 
-    &>.advantage-list__text-block {
+    & > .advantage-list__text-block {
       width: 38.91%;
     }
 
@@ -376,12 +375,12 @@
     margin: 0 auto;
     margin-bottom: 50px;
 
-    &>p {
+    & > p {
       margin-top: 37px;
       margin-bottom: -4px;
     }
 
-    &>.advantage-list__text-block {
+    & > .advantage-list__text-block {
       width: 172px;
     }
 
