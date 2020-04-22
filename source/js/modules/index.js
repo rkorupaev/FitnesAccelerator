@@ -59,3 +59,15 @@ let mySwiper2 = new Swiper(`.reviews-block__slider`, {
 let scroll = new SmoothScroll(`a[href*="#"]`, {
   speed: 500
 });
+
+let phoneMask = IMask(document.getElementById(`phone`), {
+  mask: '+{7}(3812)000-00-00',
+  lazy: true,
+  placeholderChar: '#'
+});
+
+let phoneBlock = document.querySelector(`.form-block__item--phone`);
+
+phoneBlock.addEventListener(`mouseover`, ()=> {
+    phoneMask.updateOptions({ lazy: false });
+},true);
