@@ -64,19 +64,9 @@ let phoneInput = document.getElementById(`phone`);
 
 let phoneMask = IMask(phoneInput, {
   mask: `+{7}(000)000-00-00`,
-  lazy: true,
+  lazy: false,
   placeholderChar: `#`
 });
-
-let phoneBlock = document.querySelector(`.form-block__item--phone`);
-
-phoneBlock.addEventListener(`focus`, () => {
-  phoneMask.updateOptions({lazy: false});
-}, true);
-
-phoneBlock.addEventListener(`mouseover`, () => {
-  phoneMask.updateOptions({lazy: false});
-}, true);
 
 // let formTest = document.querySelector(`.form-block`);
 
