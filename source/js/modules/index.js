@@ -61,7 +61,6 @@ let scroll = new SmoothScroll(`a[href*="#"]`, {
 });
 
 let phoneInput = document.getElementById(`phone`);
-
 let phoneMask = IMask(phoneInput, {
   mask: `+{7}(000)000-00-00`,
   lazy: false,
