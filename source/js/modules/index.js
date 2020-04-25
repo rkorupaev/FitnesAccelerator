@@ -84,3 +84,27 @@ form.addEventListener(`submit`, (evt) => {
     console.log(`good`);
   }
 });
+
+
+const reviewsBlock = document.querySelector(`.reviews-block__slider`);
+
+const mySwiper2 = (el) => {
+  // eslint-disable-next-line no-undef
+  return new Swiper(el, {
+    // Optional parameters
+    direction: `horizontal`,
+    loop: true,
+    grabCursor: true,
+    speed: 1500,
+    spaceBetween: 100,
+    // Navigation arrows
+    navigation: {
+      nextEl: `.reviews-block__next`,
+      prevEl: `.reviews-block__prev`,
+    },
+  });
+};
+
+if (reviewsBlock) {
+  mySwiper2(reviewsBlock);
+}
