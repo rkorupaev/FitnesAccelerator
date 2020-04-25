@@ -67,16 +67,21 @@ let phoneMask = IMask(phoneInput, {
   placeholderChar: `#`
 });
 
-// let formTest = document.querySelector(`.form-block`);
+let form = document.querySelector(`.contacts-block__form-wrapper form`);
+let formValidity = false;
 
-// formTest.addEventListener(`submit`, (evt) => {
-//   evt.preventDefault();
-//   if (!phoneInput.checkValidity()) {
-//     evt.preventDefault();
-//     phoneInput.setCustomValidity(`Заполните это поле.`);
-//     console.log(`worked`);
+phoneInput.addEventListener(`input`, (evt) => {
+  if (phoneInput.value.indexOf(`#`) !== -1) {
+    phoneInput.setCustomValidity(`Заполните это поле.`);
+  } else {
+    phoneInput.setCustomValidity(``);
+    formValidity = true;
+  }
+});
 
-//     console.dir(phoneInput);
-//     console.dir(phoneMask);
-//   }
-// });
+form.addEventListener(`submit`, (evt) => {
+  evt.preventDefault();
+  if (formValidity) {
+    console.log('good');
+  }
+});
