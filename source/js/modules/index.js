@@ -63,15 +63,14 @@ let scroll = new SmoothScroll(`a[href*="#"]`, {
 let phoneInput = document.getElementById(`phone`);
 let phoneMask = IMask(phoneInput, {
   mask: `+{7}(000)000-00-00`,
-  lazy: false,
-  placeholderChar: `#`
+  lazy: false
 });
 
 let form = document.querySelector(`.contacts-block__form-wrapper form`);
 let formValidity = false;
 
-phoneInput.addEventListener(`input`, (evt) => {
-  if (phoneInput.value.indexOf(`#`) !== -1) {
+phoneInput.addEventListener(`input`, () => {
+  if (phoneInput.value.indexOf(`_`) !== -1) {
     phoneInput.setCustomValidity(`Заполните это поле.`);
   } else {
     phoneInput.setCustomValidity(``);
@@ -82,6 +81,6 @@ phoneInput.addEventListener(`input`, (evt) => {
 form.addEventListener(`submit`, (evt) => {
   evt.preventDefault();
   if (formValidity) {
-    console.log('good');
+    console.log(`good`);
   }
 });
