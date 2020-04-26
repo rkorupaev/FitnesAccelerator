@@ -13,7 +13,7 @@
     line-height: 49px;
 
     margin: 0;
-    margin-bottom: 59px;
+    margin-bottom: 19px;
 
     letter-spacing: 0.03em;
 
@@ -31,7 +31,7 @@
 .reviews-block__prev,
 .reviews-block__next {
   position: absolute;
-  top: 92px;
+  top: 126px;
 
   cursor: pointer;
   transition-duration: 0.3s;
@@ -75,7 +75,7 @@
 }
 
 .reviews-block__prev {
-  left: -65px;
+  left: -90px;
 
   &::after {
     transform: rotate(-45deg);
@@ -87,7 +87,7 @@
 }
 
 .reviews-block__next {
-  right: -45px;
+  right: -65px;
 
   &::after {
     transform: rotate(45deg);
@@ -103,6 +103,7 @@
 
   width: 560px;
   min-height: 242px;
+  padding: 40px;
 }
 
 .reviews-block__slide {

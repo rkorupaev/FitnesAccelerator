@@ -111,6 +111,7 @@
   min-height: 100%;
 
   transform: translateX(-50%);
+  text-align: center;
 
   color: white;
   background-color: $advantages-block-background;
@@ -126,24 +127,14 @@
     margin-top: 55px;
   }
 
-  & > .advantage-list__text-block {
-    display: flex;
-    flex-direction: column;
-
+  & p {
     width: 77.4%;
-    margin: 0;
-
-    text-align: center;
-
-    align-items: center;
-
-    & p {
-      width: 100%;
-    }
   }
+
 
   & span {
     font-size: 26px;
+    font-weight: 700;
     line-height: 39px;
 
     margin-top: 2px;
@@ -291,8 +282,8 @@
       margin-top: 30px;
     }
 
-    & > .advantage-list__text-block {
-      width: 38.91%;
+    & p {
+      width: 39%;
     }
 
     & span {
@@ -393,7 +384,7 @@
       margin-bottom: -4px;
     }
 
-    & > .advantage-list__text-block {
+    & p {
       width: 172px;
     }
 
