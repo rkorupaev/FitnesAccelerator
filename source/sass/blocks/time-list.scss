@@ -1,0 +1,48 @@
+.time-list {
+  margin-top: 74px;
+  margin-right: 8px;
+
+  list-style: none;
+
+  color: $schedule-side-text-color;
+}
+
+.time-list__item {
+  display: flex;
+
+  box-sizing: border-box;
+  width: 65px;
+  min-height: 110px;
+  margin-bottom: 8px;
+
+  transition-duration: 0.3s;
+
+  border: 2px solid $promo-text-color;
+
+  align-items: center;
+  justify-content: center;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &--active {
+    color: $white;
+    border-color: transparent;
+    background-color: $background-red;
+  }
+}
+
+@media (max-width: $tablet-only) {
+  .time-list {
+    margin-top: 73px;
+  }
+
+  .time-list__item {
+    display: flex;
+
+    box-sizing: border-box;
+    width: 62px;
+    min-height: 108px;
+  }
+}

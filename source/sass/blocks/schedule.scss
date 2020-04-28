@@ -1,0 +1,64 @@
+.schedule-block {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  & h2 {
+    font-family: $font-primary;
+    font-size: 49px;
+    line-height: 49px;
+
+    margin: 0;
+    margin-bottom: 62px;
+
+    letter-spacing: 0.03em;
+
+    color: $black;
+  }
+}
+
+
+.schedule-block__wrapper {
+  font-family: $side-text;
+  font-size: 18px;
+  line-height: 27px;
+
+  display: flex;
+
+  width: 100%;
+}
+
+.schedule-block__exercise-wrapper {
+  display: flex;
+}
+
+.schedule-block__slider {
+  display: none;
+}
+
+@media (max-width: $tablet-only) {
+  .schedule-block {
+    & h2 {
+      font-size: 42px;
+      line-height: 42px;
+
+      margin-bottom: 50px;
+    }
+  }
+
+  .schedule-block__container {
+    width: 678px;
+  }
+
+
+  .schedule-block__slider {
+    display: block;
+
+    width: 100%;
+    height: 4px;
+    margin-top: 8px;
+
+    background-color: $schedule-block-slider-background;
+  }
+}
