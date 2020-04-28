@@ -166,9 +166,13 @@
 
 @media (max-width: $mobile-only) {
   .promo-block {
+    padding-top: 68px;
+    padding-bottom: 66px;
+
     & h2 {
       font-size: 32px;
       line-height: 32px;
+      margin-bottom: 45px;
     }
   }
 
@@ -185,6 +189,7 @@
     min-height: 200px;
     padding-right: 0;
     padding-left: 0;
+    padding-bottom: 45px;
 
     text-align: center;
 
@@ -192,13 +197,13 @@
 
     & p {
       width: 189px;
-      margin-top: 20px;
+      margin-top: 15px;
     }
   }
 
   .promo-block__image {
     width: 100%;
-    min-height: 290px;
+    min-height: 299px;
   }
 
   .promo-block__text-block {

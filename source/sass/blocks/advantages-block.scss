@@ -38,6 +38,11 @@
 }
 
 @media (max-width: $mobile-only) {
+  .advantages-block {
+    padding-top: 67px;
+    padding-bottom: 20px;
+  }
+
   .advantages-block__container {
     text-align: center;
 
@@ -45,7 +50,7 @@
       font-size: 32px;
       line-height: 32px;
 
-      margin-bottom: 17px;
+      margin-bottom: 53px;
     }
   }
 }

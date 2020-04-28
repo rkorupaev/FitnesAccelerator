@@ -174,11 +174,16 @@
 
 @media (max-width: $mobile-only) {
   .contacts-block {
-    background: linear-gradient(to bottom, $black 47.41%, $white 47%);
+    padding-top: 65px;
+    padding-bottom: 44px;
+
+    background: linear-gradient(to bottom, $black 43%, $white 42%);
 
     & h2 {
       font-size: 32px;
       line-height: 32px;
+
+      margin-bottom: 36px;
     }
   }
 
@@ -203,18 +208,18 @@
       }
 
       & li {
-        margin-bottom: 40px;
-      }
-    }
+        margin-bottom: 28px;
 
-    .form-block__item {
-      margin-bottom: 40px;
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
     }
   }
 
   .contacts-block__contacts {
     width: 100%;
-    margin-top: 70px;
+    margin-top: 68px;
   }
 
   .contacts-block__contacts-wrapper {

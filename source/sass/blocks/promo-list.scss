@@ -100,17 +100,27 @@
 @media (max-width: $mobile-only) {
   .promo-list__item {
     width: 94.48%;
+    min-height: 131px;
     margin: 0;
     margin-bottom: 30px;
     padding-right: 0;
     padding-left: 0;
+    padding-top: 33px;
 
     text-align: center;
 
     align-items: center;
 
+    & h3 {
+      margin-bottom: 11px;
+    }
+
     & p {
       width: 159px;
     }
+  }
+
+  .promo-list__button {
+    margin-bottom: 7px;
   }
 }

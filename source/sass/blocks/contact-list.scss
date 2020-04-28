@@ -77,5 +77,23 @@
 
   .contact-list__item {
     margin-bottom: 20px;
+
+    & h3 {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 6px;
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    & a {
+      font-size: 18px;
+      line-height: 27px;
+
+      width: 200px;
+    }
   }
 }
