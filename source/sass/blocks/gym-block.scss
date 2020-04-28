@@ -18,7 +18,7 @@
 
 .gym-block__text-block {
   width: 30.5%;
-  padding-left: 60px;
+  padding-left: 120px;
 
   & h2 {
     font-family: $font-primary;
@@ -47,6 +47,7 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 24px;
+  width: 355px;
 
   margin: 0;
 
@@ -60,7 +61,7 @@
 
   width: 660px;
   height: 401px;
-  margin-left: 7.52%;
+  margin-left: 3.75%;
 
   background-color: $main-background;
   background-image: url("../img/gym.jpg");
@@ -87,6 +88,7 @@
   &::after {
     position: absolute;
     left: 0;
+    top: 0;
 
     width: 364px;
     height: 228px;

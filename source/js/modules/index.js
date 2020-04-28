@@ -189,7 +189,7 @@
  //   }
  // });
 
- console.dir(window);
+ // console.dir(window);
 
  window.addEventListener(`resize = 'horizontal'`, (evt) => {
 

@@ -6,10 +6,10 @@
   font-family: $side-text;
 
   width: 31.6%;
-  padding-top: 87px;
-  padding-right: 5.78%;
+  padding-top: 82px;
+  padding-right: 4.78%;
   padding-bottom: 87px;
-  padding-left: 5.71%;
+  padding-left: 6.71%;
 
   color: $white;
   background-color: $background-red;
@@ -20,7 +20,7 @@
 
   display: flex;
 
-  margin-bottom: 33px;
+  margin-bottom: 12px;
 
   & h2 {
     font-family: $font-primary;
@@ -37,7 +37,7 @@
     font-size: 18px;
     line-height: 27px;
 
-    margin-bottom: 55px;
+    margin-bottom: 46px;
   }
 }
 
@@ -50,11 +50,11 @@
   flex-direction: column;
 
   width: 64px;
-  margin-bottom: 4px;
+  margin-bottom: 11px;
 
   & > p {
     font-size: 18px;
-    line-height: 27px;
+    line-height: 31px;
 
     border-bottom: 1px solid $white;
   }
@@ -66,7 +66,7 @@
   & > span {
     font-size: 40px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 52px;
 
     margin-right: 7px;
   }
@@ -88,7 +88,7 @@
 
   & > p {
     font-size: 18px;
-    line-height: 27px;
+    line-height: 32px;
 
     border-bottom: 1px solid $white;
   }
@@ -96,7 +96,7 @@
   & span {
     font-size: 40px;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 51px;
   }
 }
 
@@ -105,10 +105,10 @@
   font-weight: 700;
   line-height: 18px;
 
-  width: 85%;
-  min-height: 22px;
+  width: 81%;
+  min-height: 19px;
 
-  padding-top: 25px;
+  padding-top: 23px;
 
   cursor: pointer;
 
@@ -210,7 +210,7 @@
 
     & span {
       font-size: 24px;
-      line-height: 36px;
+      line-height: 30px;
     }
   }
 
@@ -218,7 +218,11 @@
     font-size: 10px;
     line-height: 12px;
 
-    min-height: 43px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+
+    min-height: 16px;
+    max-width: 204px;
   }
 
   .games-block__image {
@@ -235,12 +239,31 @@
 @media (max-width: $mobile-only) {
   .games-block {
     flex-direction: column;
+
+    max-width: 442px;
+  }
+
+  .games-block__text-wrapper {
+    margin-bottom: 2px;
+
+    & + p {
+      margin-bottom: 30px;
+    }
   }
 
   .games-block__text {
     width: 72.5%;
     padding-right: 13.75%;
     padding-left: 13.75%;
+    padding-top: 48px;
+  }
+
+  .games-block__date-block {
+    margin-bottom: 0;
+  }
+
+  .games-block__button {
+    width: 75%;
   }
 
   .games-block__image {

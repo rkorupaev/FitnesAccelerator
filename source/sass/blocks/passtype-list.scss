@@ -251,6 +251,8 @@
   }
 
   .passtype-list__price-shadow {
+    top: 30%;
+
     & span {
       font-size: 80px;
       line-height: 120px;
@@ -261,7 +263,7 @@
     width: 100%;
     max-width: 442px;
     margin-bottom: 35px;
-    padding-top: 41px;
+    padding-top: 43px;
 
     & h3 {
       font-size: 22px;
@@ -270,12 +272,16 @@
       margin-bottom: 10px;
     }
 
+    & > p {
+      margin-bottom: 54px;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 
   .passtype-list__button {
-    margin-bottom: 47px;
+    margin-bottom: 45px;
   }
 }
