@@ -148,7 +148,7 @@
     flex-direction: column;
 
     width: 31.34%;
-    padding-top: 51px;
+    padding-top: 46px;
     padding-right: 5.86%;
     padding-bottom: 51px;
     padding-left: 5.86%;
@@ -157,7 +157,7 @@
   }
 
   .games-block__text-wrapper {
-    margin-bottom: 15px;
+    margin-bottom: 2px;
 
     & h2 {
       font-size: 52px;
@@ -170,7 +170,7 @@
       font-size: 12px;
       line-height: 18px;
 
-      margin-bottom: 36px;
+      margin-bottom: 31px;
     }
   }
 
@@ -180,7 +180,7 @@
 
   .games-block__date-block {
     width: 42px;
-    margin-bottom: 4px;
+    margin-bottom: 0;
 
     & > p {
       font-size: 12px;
@@ -221,8 +221,11 @@
     padding-top: 9px;
     padding-bottom: 8px;
 
-    min-height: 16px;
+    min-height: 19px;
     max-width: 204px;
+    width: 75%;
+
+    border: 2px solid $white;
   }
 
   .games-block__image {

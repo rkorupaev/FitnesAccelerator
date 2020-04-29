@@ -119,11 +119,13 @@
 
 @media (max-width: $tablet-only) {
   .promo-block {
+    padding-top: 97px;
+
     & h2 {
       font-size: 42px;
       line-height: 42px;
 
-      margin-bottom: 50px;
+      margin-bottom: 44px;
     }
   }
 
@@ -143,6 +145,11 @@
 
   .promo-block__text {
     width: 30%;
+    padding-bottom: 45px;
+
+    & p {
+      margin-top: 19px;
+    }
   }
 
   .promo-block__image {

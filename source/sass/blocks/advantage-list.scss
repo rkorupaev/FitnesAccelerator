@@ -198,9 +198,14 @@
 
       border: none;
     }
+  }
 
-    & .advantage-list__number-block {
-      margin-top: 0;
+  .advantage-list__number-block {
+    margin: 0;
+    margin-top: 7px;
+
+    & span {
+      line-height: 27px;
     }
   }
 
@@ -242,15 +247,19 @@
   }
 
   .advantage-list__item {
-    width: 46.3%;
+    width: 301px;
     min-height: 112px;
 
     &:nth-child(2n) {
-      margin-left: 50px;
+      margin-left: 54px;
 
       & .advantage-list__number {
         width: 59px;
       }
+    }
+
+    &--width-right {
+      width: 315px;
     }
   }
 
@@ -281,8 +290,8 @@
     width: 65.19%;
     min-height: 239px;
     margin: 0 17.4%;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 8px;
+    margin-bottom: 42px;
 
     transform: translateX(0);
 
@@ -354,11 +363,11 @@
 
       margin-top: 15px;
       margin-bottom: -17px;
-      }
+    }
 
-      & span {
-        line-height: 27px;
-      }
+    & span {
+      line-height: 27px;
+    }
   }
 
   .advantage-list__text-block {
