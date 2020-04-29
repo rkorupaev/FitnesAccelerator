@@ -88,11 +88,19 @@
 @media (max-width: $tablet-only) {
   .promo-list__item {
     width: 37.46%;
+    min-height: 145px;
     margin: 0;
     margin-right: 30px;
 
+    padding-top: 22px;
+    padding-bottom: 28px;
+
     &:last-child {
       margin: 0;
+    }
+
+    & h3 {
+      margin-bottom: 10px;
     }
   }
 }

@@ -152,6 +152,18 @@
 
 
 @media (max-width: $tablet-only) {
+  .reviews-block {
+    padding-bottom: 60px;
+
+    & h2 {
+      font-size: 42px;
+      line-height: 42px;
+
+      margin-bottom: 3px;
+    }
+  }
+
+
   .reviews-block__slider {
     width: 566px;
   }
@@ -160,6 +172,19 @@
     & img {
       left: 65px;
     }
+  }
+
+  .reviews-block__prev,
+  .reviews-block__next {
+    top: 132px;
+  }
+
+  .reviews-block__prev {
+    left: -84px;
+  }
+
+  .reviews-block__next {
+    right: -60px;
   }
 }
 
