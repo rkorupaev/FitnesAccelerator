@@ -138,6 +138,13 @@
     width: 324px;
     height: 390px;
     margin-left: 30px;
+
+    background-image: url("../img/main_trainer_tablet.png");
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../img/main_trainer_tablet_2x.png");
+    }
   }
 
   .landing-block__image {
