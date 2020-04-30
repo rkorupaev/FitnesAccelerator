@@ -4,12 +4,15 @@
 
   align-items: center;
 
+  padding-top: 114px;
+  padding-bottom: 115px;
+
   & h2 {
     font-size: 49px;
     line-height: 49px;
 
     margin: 0;
-    margin-bottom: 62px;
+    margin-bottom: 55px;
 
     letter-spacing: 0.03em;
 
@@ -42,7 +45,7 @@
   width: 34%;
   padding: 0 45px;
   padding-top: 40px;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
 
   color: $white;
   background-color: $background-red;
@@ -65,7 +68,7 @@
     font-size: 18px;
     line-height: 25px;
 
-    margin-top: 35px;
+    margin-top: 19px;
     margin-bottom: 30px;
   }
 }
@@ -147,10 +150,6 @@
   .promo-block__text {
     width: 30%;
     padding-bottom: 45px;
-
-    & p {
-      margin-top: 19px;
-    }
   }
 
   .promo-block__image {

@@ -8,7 +8,7 @@
 
   width: 100%;
   min-width: 1160px;
-  margin-top: 39px;
+  margin-top: 40px;
 
   list-style: none;
 
@@ -134,7 +134,7 @@
 .passtype-list__price-shadow {
   position: absolute;
   z-index: -1;
-  top: 32%;
+  top: 30%;
   left: 0;
 
   display: flex;
@@ -226,10 +226,6 @@
       margin-bottom: 66px;
     }
   }
-
-  .passtype-list__price-shadow {
-    top: 30%;
-  }
 }
 
 @media (max-width: $mobile-only) {
@@ -255,8 +251,6 @@
   }
 
   .passtype-list__price-shadow {
-    top: 30%;
-
     & span {
       font-size: 80px;
       line-height: 120px;

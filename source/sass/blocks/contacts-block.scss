@@ -1,6 +1,6 @@
 .contacts-block {
   width: 100%;
-  padding: 70px 0;
+  padding: 64px 0;
 
   border-top: 1px solid $contacts-block-top-border;
   background: linear-gradient(to right, $black 50%, $white 50%);
@@ -11,7 +11,7 @@
     line-height: 49px;
 
     margin: 0;
-    margin-bottom: 58px;
+    margin-bottom: 40px;
 
     letter-spacing: 0.03em;
   }
@@ -84,7 +84,6 @@
     }
   }
 
-
   & button {
     font-size: 14px;
     line-height: 16px;
@@ -125,6 +124,10 @@
 
 .contacts-block__contacts-wrapper {
   padding-left: 120px;
+
+  & h2 {
+    margin-bottom: 44px;
+  }
 }
 
 .contacts-block__list-wrapper {
