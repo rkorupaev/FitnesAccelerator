@@ -133,20 +133,23 @@
 
 @media (max-width: $tablet-only) {
   .contacts-block {
-    background: linear-gradient(to bottom, $black 52.3%, $white 50%);
+    background: linear-gradient(to bottom, $black 47.5%, $white 47.5%);
+
+    padding-top: 65px;
+    padding-bottom: 63px;
 
     & h2 {
       font-size: 42px;
       line-height: 42px;
 
-      margin-bottom: 50px;
+      margin-bottom: 35px;
     }
   }
 
   .contacts-block__wrapper {
     flex-direction: column;
 
-    align-items: center;
+    padding-left: 133px;
   }
 
   .contacts-block__form-wrapper {
@@ -157,20 +160,23 @@
       width: 100%;
     }
 
-    & input {
-      width: 206px;
+    & ul {
+      & input {
+        width: 206px;
+      }
     }
   }
 
   .contacts-block__contacts {
     width: 472px;
-    margin-top: 70px;
+    margin-top: 66px;
   }
 
   .contacts-block__contacts-wrapper {
     padding-left: 0;
   }
 }
+
 
 @media (max-width: $mobile-only) {
   .contacts-block {

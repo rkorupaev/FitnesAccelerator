@@ -163,14 +163,23 @@
     }
   }
 
-
   .reviews-block__slider {
     width: 566px;
   }
 
   .reviews-block__slide {
+    padding-top: 58px;
+
     & img {
       left: 65px;
+    }
+  }
+
+  .reviews-block__text {
+    margin-left: 173px;
+
+    & h3 {
+      margin-bottom: 16px;
     }
   }
 
