@@ -44,6 +44,12 @@
 
 
 @media (max-width: $tablet-only) {
+  .exercise-list {
+    &--tablet {
+      display: none;
+    }
+  }
+
   .exercise-list__item {
     width: 146px;
     min-height: 108px;

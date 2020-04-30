@@ -149,62 +149,36 @@ const addAnimation = (element, animationClass) => {
   element.classList.add(animationClass);
   setTimeout(() => {
     element.classList.remove(animationClass);
-  }, 1500);
+  }, 500);
 };
 
-// const scheduleSliderBlock = document.querySelector(`.schedule-block__slider`);
-// const exerciseListsArrayBlock = document.querySelector(`.schedule-block__exercise-wrapper`);
-// const dayCellsArrayBlock = document.querySelector(`.schedule-block__day-list`);
-// const initialExerciseArray = exerciseListsArray;
-// const initialDayArray = dayCellsArray;
+const startIndex = [0, 1, 2];
+const endIndex = [4, 5, 6];
+const sliderPin = document.querySelector(`.schedule-block__slider-pin`);
 
-// if (scheduleSliderBlock) {
-//   exerciseListsArray.forEach((list, listIndex) => {
-//     if (listIndex >= 4) {
-//       list.remove();
-//     }
-//   });
-
-//   dayCellsArray.forEach((item, itemIndex) => {
-//     if (itemIndex >= 4) {
-//       item.remove();
-//     }
-//   });
-// }
-
-// let initialEnd = 4;
-// let initialStart = 0;
-
-// scheduleSliderBlock.addEventListener(`click`, (evt) => {
-//   if (initialStart >= 0 && initialEnd <= 6) {
-//     exerciseListsArray[initialStart].remove();
-//     dayCellsArray[initialStart].remove();
-//     initialStart++;
-
-//     exerciseListsArrayBlock.append(initialExerciseArray[initialEnd]);
-//     addAnimation(initialExerciseArray[initialEnd], `unfade`);
-//     dayCellsArrayBlock.append(initialDayArray[initialEnd]);
-//     addAnimation(initialDayArray[initialEnd], `unfade`);
-//     initialEnd++;
-//   }
-// });
-
-// console.dir(window);
-
-window.addEventListener(`resize = 'horizontal'`, (evt) => {
-
-  if (window.outerWidth < 1200) {
-    exerciseListsArray.forEach((list, listIndex) => {
-      if (listIndex >= 4) {
-        list.classList.add(`hidden`);
+if (sliderPin) {
+  sliderPin.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
+    sliderPin.classList.toggle(`schedule-block__slider-pin--position-right`);
+    let count = 0;
+    exerciseListsArray.forEach((item, itemIndex) => {
+      if (item.classList.contains(`exercise-list--tablet`) && itemIndex >= 4 && count < 3) {
+        count++;
+        exerciseListsArray[itemIndex].classList.remove(`exercise-list--tablet`);
+        addAnimation(exerciseListsArray[3], `unfade`);
+        addAnimation(exerciseListsArray[itemIndex], `unfade`);
+        startIndex.forEach((item) => {
+          exerciseListsArray[item].classList.add(`exercise-list--tablet`);
+        });
+      } else if (item.classList.contains(`exercise-list--tablet`) && itemIndex <= 2 && count < 3) {
+        count++;
+        exerciseListsArray[itemIndex].classList.remove(`exercise-list--tablet`);
+        addAnimation(exerciseListsArray[3], `unfade`);
+        addAnimation(exerciseListsArray[itemIndex], `unfade`);
+        endIndex.forEach((item) => {
+          exerciseListsArray[item].classList.add(`exercise-list--tablet`);
+        });
       }
     });
-
-    dayCellsArray.forEach((item, itemIndex) => {
-      if (itemIndex >= 4) {
-        item.classList.add(`hidden`);
-      }
-    });
-  }
-
-});
+  });
+}

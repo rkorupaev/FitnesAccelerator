@@ -38,5 +38,9 @@
   .day-list__item {
     width: 146px;
     min-height: 65px;
+
+    &--tablet {
+      display: none;
+    }
   }
 }

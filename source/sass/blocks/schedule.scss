@@ -54,11 +54,29 @@
 
   .schedule-block__slider {
     display: block;
+    position: relative;
 
-    width: 100%;
+    width: 608px;
     height: 4px;
     margin-top: 8px;
 
     background-color: $schedule-block-slider-background;
+  }
+
+  .schedule-block__slider-pin {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 50%;
+    height: 4px;
+
+    background-color: $background-red;
+    transition-duration: 0.5s;
+
+    &--position-right {
+      left: 50%;
+    }
   }
 }
