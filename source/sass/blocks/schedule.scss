@@ -4,7 +4,7 @@
 
   align-items: center;
 
-  & h2 {
+  & h1 {
     font-family: $font-primary;
     font-size: 49px;
     line-height: 49px;
@@ -17,7 +17,6 @@
     color: $black;
   }
 }
-
 
 .schedule-block__wrapper {
   font-family: $side-text;
@@ -33,7 +32,8 @@
   display: flex;
 }
 
-.schedule-block__slider {
+.schedule-block__slider,
+.schedule-block__select-wrapper {
   display: none;
 }
 
@@ -78,5 +78,24 @@
     &--position-right {
       left: 50%;
     }
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .schedule-block__select-wrapper {
+    display: block;
+
+    & span {
+      display: block;
+      width: 51px;
+    }
+  }
+
+  .schedule-block__wrapper {
+    max-width: 442px;
+  }
+
+  .schedule-block__slider {
+    display: none;
   }
 }

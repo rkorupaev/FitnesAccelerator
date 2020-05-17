@@ -33,12 +33,21 @@
   .footer-social-list {
     min-width: 100px;
     margin: 0;
+    margin-right: -10px;
   }
 }
 
 @media (max-width: $mobile-only) {
   .footer-social-list {
     min-width: 151px;
+  }
+
+  .footer-social-list__item {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-left: -10px;
+    }
   }
 
   .footer-social-list__item--vk {

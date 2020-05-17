@@ -46,3 +46,17 @@
     min-height: 108px;
   }
 }
+
+@media (max-width: $mobile-only) {
+    .time-list {
+    margin-top: 68px;
+  }
+
+  .time-list__item {
+    width: 60px;
+    min-height: 80px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

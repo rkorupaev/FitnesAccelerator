@@ -44,3 +44,9 @@
     }
   }
 }
+
+@media (max-width: $mobile-only) {
+  .day-list {
+    display: none;
+  }
+}
