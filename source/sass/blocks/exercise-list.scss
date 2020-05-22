@@ -61,8 +61,13 @@
     width: 100%;
     max-width: 442px;
     margin-right: 0;
+    display: none;
 
     &--mobile {
+      display: block;
+    }
+
+    &--drop-down-opened {
       display: none;
     }
   }

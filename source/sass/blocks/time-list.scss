@@ -31,6 +31,10 @@
     border-color: transparent;
     background-color: $background-red;
   }
+
+  &--drop-down-opened {
+    opacity: 0.2;
+  }
 }
 
 @media (max-width: $tablet-only) {
