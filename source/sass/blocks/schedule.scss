@@ -52,7 +52,7 @@
   }
 
   .schedule-block__container {
-    width: 678px;
+    width: 100%;
   }
 
 
@@ -77,7 +77,7 @@
     height: 4px;
 
     background-color: $background-red;
-    transition-duration: 0.5s;
+    // transition-duration: 0.5s;
 
     &--position-right {
       left: 50%;
@@ -133,7 +133,7 @@
       transition-duration: 0.3s;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         display: block;
         height: 2px;
@@ -147,7 +147,7 @@
       }
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         display: block;
         height: 2px;

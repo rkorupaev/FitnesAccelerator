@@ -1,3 +1,15 @@
+const removeArrayClass = (block, className) => {
+  block.forEach((item) => {
+    item.classList.remove(className);
+  });
+};
+
+const addArrayClass = (block, className) => {
+  block.forEach((item) => {
+    item.classList.add(className);
+  });
+};
+
 let monthToggler = document.querySelectorAll(`.months-list__item`);
 monthToggler = Array.prototype.slice.call(monthToggler, 0);
 
@@ -127,82 +139,124 @@ const dayCellsArray = document.querySelectorAll(`.day-list__item`);
 const exerciseListsArray = document.querySelectorAll(`.exercise-list`);
 
 const dropDownArrow = document.querySelector(`.schedule-block__arrow`);
-const dropDownArrowSpan = dropDownArrow.querySelector(`span`);
+const dropDownArrowSpan = document.querySelector(`span`);
 const dropDownItemList = document.querySelectorAll(`.drop-down__item`);
+const sliderPin = document.querySelector(`.schedule-block__slider-pin`);
+const sliderContainer = document.querySelector(`.schedule-block__slider`);
+const COLUMN_WIDTH = 152;
 
-if (exerciseListsArray) {
-  exerciseListsArray.forEach((list, listIndex) => {
-    const itemsArray = list.querySelectorAll(`.exercise-list__item`);
-    itemsArray.forEach((item, itemIndex) => {
-      item.addEventListener(`mouseover`, (evt) => {
-        item.classList.add(`exercise-list__item--active`);
-        timeCellsArray[itemIndex].classList.add(`time-list__item--active`);
-        dayCellsArray[listIndex].classList.add(`day-list__item--active`);
-        dropDownItemList[listIndex].classList.add(`drop-down__item--active-cell`);
-      });
+const getColumnsAmount = () => {
+  const mainContainer = document.querySelector(`.schedule-block__container`);
+  if (mainContainer) {
+    let columnAmount = Math.floor(mainContainer.offsetWidth / COLUMN_WIDTH);
+    return columnAmount;
+  }
+};
 
-      item.addEventListener(`mouseout`, (evt) => {
-        item.classList.remove(`exercise-list__item--active`);
-        timeCellsArray[itemIndex].classList.remove(`time-list__item--active`);
-        dayCellsArray[listIndex].classList.remove(`day-list__item--active`);
-        dropDownItemList[listIndex].classList.remove(`drop-down__item--active-cell`);
-      })
-    });
+const initiateColumns = () => {
+  let columnAmount = getColumnsAmount();
+  for (let i = columnAmount; i <= dayCellsArray.length; i++) {
+    if (dayCellsArray[i]) {
+      dayCellsArray[i].classList.add(`day-list__item--tablet`);
+      exerciseListsArray[i].classList.add(`exercise-list--tablet`);
+    }
+  }
+  if (sliderContainer) {
+    sliderContainer.style.width = COLUMN_WIDTH * columnAmount + `px`;
+    sliderPin.style.width = sliderContainer.style.width / 2;
+  }
+};
+
+const debounce = (func, wait, immediate) => {
+  let timeout;
+  return function () {
+    let context = this,
+      args = arguments;
+    let later = function () {
+      timeout = null;
+      if (!immediate) {
+        func.apply(context, args);
+      }
+    };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) {
+      func.apply(context, args);
+    }
+  };
+};
+
+
+const recalcColumns = debounce(function () {
+  removeArrayClass(dayCellsArray, `day-list__item--tablet`);
+  removeArrayClass(exerciseListsArray, `exercise-list--tablet`);
+  initiateColumns();
+}, 200);
+
+window.addEventListener(`load`, (evt) => {
+  evt.preventDefault();
+  initiateColumns();
+});
+
+window.addEventListener(`resize`, recalcColumns);
+
+const MIN_LEFT = 0;
+let initialExerciseArray = exerciseListsArray;
+let initialDayArray = dayCellsArray;
+
+initialExerciseArray = Array.prototype.slice.call(initialExerciseArray, 0);
+initialDayArray = Array.prototype.slice.call(initialDayArray, 0);
+
+if (sliderPin) {
+  sliderPin.addEventListener(`mousedown`, (evt) => {
+    let initLocationX = evt.clientX;
+    let columnCount = getColumnsAmount();
+
+    let maxLeft = sliderContainer.offsetWidth / 2;
+    let devideIndex = maxLeft / (7 - columnCount);
+
+    const onMouseMove = (moveEvt) => {
+      moveEvt.preventDefault();
+
+      let shift = initLocationX - moveEvt.clientX;
+
+      initLocationX = moveEvt.clientX;
+
+      sliderPin.style.left = (sliderPin.offsetLeft - shift) + `px`;
+
+      if (sliderPin.offsetLeft <= MIN_LEFT) {
+        sliderPin.style.left = MIN_LEFT + `px`;
+      } else if (sliderPin.offsetLeft >= maxLeft) {
+        sliderPin.style.left = maxLeft + `px`;
+      }
+
+      let countIndex = Math.floor(sliderPin.offsetLeft / devideIndex);
+      if (countIndex < 0) {
+        countIndex = 0;
+      }
+
+      let changedExerciseArray = initialExerciseArray.slice(countIndex, countIndex + columnCount);
+      let changedDayArray = initialDayArray.slice(countIndex, countIndex + columnCount);
+
+      addArrayClass(initialExerciseArray, `exercise-list--tablet`);
+      addArrayClass(initialDayArray, `day-list__item--tablet`);
+      removeArrayClass(changedExerciseArray, `exercise-list--tablet`);
+      removeArrayClass(changedDayArray, `day-list__item--tablet`);
+    };
+
+    const onMouseUp = (upEvt) => {
+      upEvt.preventDefault();
+
+      document.removeEventListener(`mousemove`, onMouseMove);
+      document.removeEventListener(`mouseup`, onMouseUp);
+    };
+
+    document.addEventListener(`mousemove`, onMouseMove);
+    document.addEventListener(`mouseup`, onMouseUp);
   });
 }
 
-const addAnimation = (element, animationClass) => {
-  element.classList.add(animationClass);
-  setTimeout(() => {
-    element.classList.remove(animationClass);
-  }, 500);
-};
-
-const startIndex = [0, 1, 2];
-const endIndex = [4, 5, 6];
-const sliderPin = document.querySelector(`.schedule-block__slider-pin`);
-
-// if (sliderPin) {
-//   sliderPin.addEventListener(`click`, (evt) => {
-//     evt.preventDefault();
-//     // sliderPin.style.left = `100px`;
-//     // sliderPin.classList.toggle(`schedule-block__slider-pin--position-right`);
-//     // let count = 0;
-//     // exerciseListsArray.forEach((item, itemIndex) => {
-//     //   if (item.classList.contains(`exercise-list--tablet`) && itemIndex >= 4 && count < 3) {
-//     //     count++;
-//     //     exerciseListsArray[itemIndex].classList.remove(`exercise-list--tablet`);
-//     //     addAnimation(exerciseListsArray[3], `unfade`);
-//     //     addAnimation(exerciseListsArray[itemIndex], `unfade`);
-//     //     startIndex.forEach((item) => {
-//     //       exerciseListsArray[item].classList.add(`exercise-list--tablet`);
-//     //     });
-//     //   } else if (item.classList.contains(`exercise-list--tablet`) && itemIndex <= 2 && count < 3) {
-//     //     count++;
-//     //     exerciseListsArray[itemIndex].classList.remove(`exercise-list--tablet`);
-//     //     addAnimation(exerciseListsArray[3], `unfade`);
-//     //     addAnimation(exerciseListsArray[itemIndex], `unfade`);
-//     //     endIndex.forEach((item) => {
-//     //       exerciseListsArray[item].classList.add(`exercise-list--tablet`);
-//     //     });
-//     //   }
-//     // });
-//   });
-// }
-
-sliderPin.addEventListener(`mousedown`, (evt) => {
-  const initLocationX = evt.clientX;
-
-  const onMouseMove = (moveEvt) => {
-    moveEvt.preventDefault();
-  }
-});
-
-const removeArrayClass = (block, className) => {
-  block.forEach((item) => {
-    item.classList.remove(className);
-  });
-};
 
 const initDropDown = () => {
   dropDownArrowSpan.classList.add(`rotate`);
@@ -215,11 +269,11 @@ const initDropDown = () => {
     item.classList.add(`exercise-list--drop-down-opened`);
   });
 
-  dropDownItemList.forEach((item, index) => {
+  dropDownItemList.forEach((item) => {
     item.classList.add(`drop-down__item--active`);
     item.classList.add(`drop-down__item--border`);
     dropDownItemList.forEach((item, index) => {
-      item.addEventListener(`click`, (evt) => {
+      item.addEventListener(`click`, () => {
         removeArrayClass(dropDownItemList, `drop-down__item--active`);
         removeArrayClass(dropDownItemList, `drop-down__item--border`);
         dropDownItemList[index].classList.add(`drop-down__item--active`);
@@ -236,4 +290,25 @@ const initDropDown = () => {
 
 if (dropDownArrow) {
   dropDownArrow.addEventListener(`click`, initDropDown);
+}
+
+if (exerciseListsArray) {
+  exerciseListsArray.forEach((list, listIndex) => {
+    const itemsArray = list.querySelectorAll(`.exercise-list__item`);
+    itemsArray.forEach((item, itemIndex) => {
+      item.addEventListener(`mouseover`, () => {
+        item.classList.add(`exercise-list__item--active`);
+        timeCellsArray[itemIndex].classList.add(`time-list__item--active`);
+        dayCellsArray[listIndex].classList.add(`day-list__item--active`);
+        dropDownItemList[listIndex].classList.add(`drop-down__item--active-cell`);
+      });
+
+      item.addEventListener(`mouseout`, () => {
+        item.classList.remove(`exercise-list__item--active`);
+        timeCellsArray[itemIndex].classList.remove(`time-list__item--active`);
+        dayCellsArray[listIndex].classList.remove(`day-list__item--active`);
+        dropDownItemList[listIndex].classList.remove(`drop-down__item--active-cell`);
+      });
+    });
+  });
 }

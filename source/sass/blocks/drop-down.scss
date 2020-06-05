@@ -1,26 +1,33 @@
 .drop-down {
-  appearance: none;
-  outline: none;
-  width: 100%;
-
   font-size: 16px;
   line-height: 18px;
+
+  width: 100%;
+
   color: $schedule-side-text-color;
+  outline: none;
+
+  appearance: none;
 }
 
 .drop-down__item {
   display: none;
-  min-height: 60px;
-  outline: none;
+
   box-sizing: border-box;
+  min-height: 60px;
+
+  transition-duration: 0.3s;
+
   border: 2px solid $promo-text-color;
+  outline: none;
 
   align-items: center;
   justify-content: center;
 
   &--border {
-    border-bottom: none;
     min-height: 57.5px;
+
+    border-bottom: none;
 
     &:last-child {
       border-bottom: 2px solid $promo-text-color;
