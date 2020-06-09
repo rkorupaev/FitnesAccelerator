@@ -137,9 +137,11 @@ if (form) {
 const timeCellsArray = document.querySelectorAll(`.time-list__item`);
 const dayCellsArray = document.querySelectorAll(`.day-list__item`);
 const exerciseListsArray = document.querySelectorAll(`.exercise-list`);
+const dropDownWrapper = document.querySelector(`.schedule-block__drop-down-wrapper`);
+const testBlock = document.querySelector(`.schedule-block`);
 
 const dropDownArrow = document.querySelector(`.schedule-block__arrow`);
-const dropDownArrowSpan = document.querySelector(`span`);
+const dropDownArrowSpan = document.querySelector(`.schedule-block__arrow span`);
 const dropDownItemList = document.querySelectorAll(`.drop-down__item`);
 const sliderPin = document.querySelector(`.schedule-block__slider-pin`);
 const sliderContainer = document.querySelector(`.schedule-block__slider`);
@@ -169,10 +171,10 @@ const initiateColumns = () => {
 
 const debounce = (func, wait, immediate) => {
   let timeout;
-  return function () {
+  return function() {
     let context = this,
       args = arguments;
-    let later = function () {
+    let later = function() {
       timeout = null;
       if (!immediate) {
         func.apply(context, args);
@@ -188,7 +190,7 @@ const debounce = (func, wait, immediate) => {
 };
 
 
-const recalcColumns = debounce(function () {
+const recalcColumns = debounce(function() {
   removeArrayClass(dayCellsArray, `day-list__item--tablet`);
   removeArrayClass(exerciseListsArray, `exercise-list--tablet`);
   initiateColumns();
@@ -242,6 +244,7 @@ if (sliderPin) {
       addArrayClass(initialExerciseArray, `exercise-list--tablet`);
       addArrayClass(initialDayArray, `day-list__item--tablet`);
       removeArrayClass(changedExerciseArray, `exercise-list--tablet`);
+      addArrayClass(changedExerciseArray, `popup`);
       removeArrayClass(changedDayArray, `day-list__item--tablet`);
     };
 
@@ -257,8 +260,26 @@ if (sliderPin) {
   });
 }
 
+const testFunc = (evt) => {
+  evt.preventDefault();
 
-const initDropDown = () => {
+  if (dropDownArrowSpan.classList.contains(`rotate`)) {
+    console.dir(evt.target);
+
+    if (!evt.target.classList.contains(`drop-down__item`)) {
+      // removeArrayClass(dropDownItemList, `drop-down__item--active`);
+      // removeArrayClass(dropDownItemList, `drop-down__item--border`);
+      // removeArrayClass(timeCellsArray, `time-list__item--drop-down-opened`);
+      dropDownArrowSpan.classList.remove(`rotate`);
+      // item.style.borderBottomWidth = `2px`;
+    };
+
+    window.removeEventListener(`click`, testFunc);
+  }
+};
+
+
+const initDropDown = (evt) => {
   dropDownArrowSpan.classList.add(`rotate`);
 
   timeCellsArray.forEach((item) => {
@@ -269,28 +290,32 @@ const initDropDown = () => {
     item.classList.add(`exercise-list--drop-down-opened`);
   });
 
-  dropDownItemList.forEach((item) => {
+  let currentIndex = 0;
+
+  dropDownItemList.forEach((item, index) => {
     item.classList.add(`drop-down__item--active`);
     item.classList.add(`drop-down__item--border`);
-    dropDownItemList.forEach((item, index) => {
-      item.addEventListener(`click`, () => {
-        removeArrayClass(dropDownItemList, `drop-down__item--active`);
-        removeArrayClass(dropDownItemList, `drop-down__item--border`);
-        dropDownItemList[index].classList.add(`drop-down__item--active`);
-        exerciseListsArray[index].classList.remove(`exercise-list--drop-down-opened`);
-        exerciseListsArray[index].classList.add(`exercise-list--mobile`);
-        removeArrayClass(timeCellsArray, `time-list__item--drop-down-opened`);
-        dropDownArrowSpan.classList.remove(`rotate`);
-        item.style.borderBottomWidth = `2px`;
-      });
-
+    item.addEventListener(`click`, (evt) => {
+      removeArrayClass(dropDownItemList, `drop-down__item--active`);
+      removeArrayClass(dropDownItemList, `drop-down__item--border`);
+      dropDownItemList[index].classList.add(`drop-down__item--active`);
+      exerciseListsArray[index].classList.remove(`exercise-list--drop-down-opened`);
+      exerciseListsArray[index].classList.add(`exercise-list--mobile`);
+      removeArrayClass(timeCellsArray, `time-list__item--drop-down-opened`);
+      dropDownArrowSpan.classList.remove(`rotate`);
+      item.style.borderBottomWidth = `2px`;
+      console.dir(evt.target);
     });
   });
+
+  evt.stopPropagation();
+  window.addEventListener('click', testFunc);
 };
 
 if (dropDownArrow) {
   dropDownArrow.addEventListener(`click`, initDropDown);
 }
+
 
 if (exerciseListsArray) {
   exerciseListsArray.forEach((list, listIndex) => {
