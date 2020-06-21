@@ -264,7 +264,6 @@ const testFunc = (evt) => {
   evt.preventDefault();
 
   if (dropDownArrowSpan.classList.contains(`rotate`)) {
-    console.dir(evt.target);
 
     if (!evt.target.classList.contains(`drop-down__item`)) {
       // removeArrayClass(dropDownItemList, `drop-down__item--active`);
@@ -304,7 +303,6 @@ const initDropDown = (evt) => {
       removeArrayClass(timeCellsArray, `time-list__item--drop-down-opened`);
       dropDownArrowSpan.classList.remove(`rotate`);
       item.style.borderBottomWidth = `2px`;
-      console.dir(evt.target);
     });
   });
 
