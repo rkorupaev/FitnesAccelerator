@@ -20,12 +20,13 @@
   font-size: 28px;
   font-weight: 700;
 
-  display: block;
+  display: flex;
 
   width: 250px;
-  min-height: 150px;
+  height: 150px;
   margin-right: 25px;
 
+  cursor: pointer;
   transition-duration: 0.3s;
   letter-spacing: 0.03em;
 
@@ -33,13 +34,37 @@
   border-radius: 50px;
   background-color: $promo-text-color;
 
+  align-items: center;
+
 
   &:last-child {
     margin-right: 0;
   }
 
+
   &:hover,
   &:focus {
     transform: scale(1.1);
+  }
+
+  & a {
+    height: 100%;
+
+    outline: none;
+  }
+}
+
+@media (max-width: $mobile-only) {
+  .spreading-page__list {
+    flex-direction: column;
+  }
+
+  .spreading-page__item {
+    margin-right: 0;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
